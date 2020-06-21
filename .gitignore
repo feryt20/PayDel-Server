@@ -1,0 +1,11 @@
+.vs
+PayDel.Common/bin
+PayDel.Common/obj
+PayDel.Data/bin
+PayDel.Data/obj
+PayDel.Presentation/bin
+PayDel.Presentation/obj
+PayDel.Repo/bin
+PayDel.Repo/obj
+PayDel.Services/bin
+PayDel.Services/obj
