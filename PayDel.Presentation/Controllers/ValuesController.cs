@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PayDel.Data.DatabaseContext;
+using PayDel.Data.Infrastructures;
+using PayDel.Data.Models;
 
 namespace PayDel.Presentation.Controllers
 {
@@ -11,12 +14,33 @@ namespace PayDel.Presentation.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IUnitOfWork<PayDelDbContext> _db;
+        public ValuesController(IUnitOfWork<PayDelDbContext> dbContext)
+        {
+            _db = dbContext;
+        }
 
         // GET api/val
         [HttpGet]
-        public async Task<IEnumerable<string>> Get()
+        public async Task<ActionResult<IEnumerable<string>>> Get()
         {
-            return new string[] { "value1", "value2" };
+            //var user = new User
+            //{
+            //    Name="Babak",
+            //    UserName = "Babak",
+            //    PhoneNumber = "0921",
+            //    PasswordHash = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 },
+            //    PasswordSalt = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 },
+            //    IsActive = true,
+            //    Confirmed = true,
+            //};
+
+            //await _db._UserRepository.InsertAsync(user);
+            //await _db.SaveAcync();
+
+            //var model = await _db._UserRepository.GetAllAsync();
+
+            return Ok("ok ok");
         }
 
         // GET api/val/5

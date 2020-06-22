@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using PayDel.Data.DatabaseContext;
+using PayDel.Data.Infrastructures;
 
 namespace PayDel.Presentation
 {
@@ -27,6 +29,10 @@ namespace PayDel.Presentation
         {
             services.AddControllers();
             services.AddCors();
+
+            //services.AddTransient();//false to use --> create instance from db for each request 
+            //services.AddSingleton();//single instance of database
+            services.AddScoped<IUnitOfWork<PayDelDbContext>, UnitOfWork<PayDelDbContext>>(); //normal between Singleton and Transiant
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
