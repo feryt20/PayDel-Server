@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayDel.Data", "PayDel.Data\PayDel.Data.csproj", "{E006AD48-67CD-426A-8BDA-0A981636E643}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayDel.Data", "PayDel.Data\PayDel.Data.csproj", "{E006AD48-67CD-426A-8BDA-0A981636E643}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayDel.Common", "PayDel.Common\PayDel.Common.csproj", "{C1145330-91B5-4200-B77C-EE10BF0187C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayDel.Common", "PayDel.Common\PayDel.Common.csproj", "{C1145330-91B5-4200-B77C-EE10BF0187C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayDel.Repo", "PayDel.Repo\PayDel.Repo.csproj", "{78C979B7-0F0B-479F-92AA-7067C01E8D05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayDel.Repo", "PayDel.Repo\PayDel.Repo.csproj", "{78C979B7-0F0B-479F-92AA-7067C01E8D05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayDel.Services", "PayDel.Services\PayDel.Services.csproj", "{C834EC7F-9244-4C7A-8AC4-F317A5989A30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayDel.Services", "PayDel.Services\PayDel.Services.csproj", "{C834EC7F-9244-4C7A-8AC4-F317A5989A30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayDel.Presentation", "PayDel.Presentation\PayDel.Presentation.csproj", "{4596634F-CC76-443B-AC33-3C53D18BC843}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayDel.Presentation", "PayDel.Presentation\PayDel.Presentation.csproj", "{4596634F-CC76-443B-AC33-3C53D18BC843}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PayDel.Data.DatabaseContext;
 
 namespace PayDel.Data.Migrations
 {
     [DbContext(typeof(PayDelDbContext))]
-    partial class PayDelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200622160105_changeuserch")]
+    partial class changeuserch
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using PayDel.Data.Repositories.Repo;
-using PayDel.Data.Repositories.Interface;
+using PayDel.Repo.Repositories.Repo;
+using PayDel.Repo.Repositories.Interface;
 
-namespace PayDel.Data.Infrastructures
+namespace PayDel.Repo.Infrastructures
 {
     public class UnitOfWork<TContext> : IUnitOfWork<TContext> where TContext : DbContext, new()
     {
@@ -42,9 +42,9 @@ namespace PayDel.Data.Infrastructures
             _db.SaveChanges();
         }
 
-        public Task<int> SaveAcync()
+        public async Task<int> SaveAcync()
         {
-            return _db.SaveChangesAsync();
+            return await _db.SaveChangesAsync();
         }
         #endregion
 

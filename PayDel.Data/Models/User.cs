@@ -22,8 +22,8 @@ namespace PayDel.Data.Models
         public byte[] PasswordHash { get; set; }
         [Required]
         public byte[] PasswordSalt { get; set; }
-        public string Gender { get; set; }
-        public string DateOfBith { get; set; }
+        public bool Gender { get; set; }
+        public DateTime DateOfBith { get; set; }
         public string City { get; set; }
         public string Address { get; set; }
         public string PostalCode { get; set; }
