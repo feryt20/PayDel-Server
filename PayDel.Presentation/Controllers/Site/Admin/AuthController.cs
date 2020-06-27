@@ -19,8 +19,10 @@ using PayDel.Services.Site.Admin.Auth.Interface;
 
 namespace PayDel.Presentation.Controllers.Site.Admin
 {
+    
     [Route("site/admin/[controller]")]
     [ApiController]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class AuthController : ControllerBase
     {
         private readonly IUnitOfWork<PayDelDbContext> _db;
@@ -67,7 +69,7 @@ namespace PayDel.Presentation.Controllers.Site.Admin
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
-            throw new Exception("nnnnnnnn");
+            //throw new Exception("nnnnnnnn");
             var userFromRepo = await _authService.Login(userForLoginDto.UserName, userForLoginDto.Password);
 
             if (userFromRepo == null)
