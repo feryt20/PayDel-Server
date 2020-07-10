@@ -8,6 +8,7 @@ namespace PayDel.Repo.Infrastructures
 {
     public interface IRepository<TEntity> where TEntity : class
     {
+        int Count();
         void Insert(TEntity entity);
         void Update(TEntity entity);
         void Delete(object id);
@@ -20,7 +21,7 @@ namespace PayDel.Repo.Infrastructures
         IEnumerable<TEntity> GetMany(Expression<Func<TEntity, bool>> where);
 
 
-
+        Task<int> CountAsync();
         Task InsertAsync(TEntity entity);
         Task<TEntity> GetByIdAsync(object id);
         Task<IEnumerable<TEntity>> GetAllAsync();

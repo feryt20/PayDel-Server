@@ -1,0 +1,58 @@
+[
+  {
+    "Username": "farshadt20@yahoo.com",
+    "Name": "Stanton Hatfield",
+    "PhoneNumber": "09104717184",
+    "Address": "733 Lombardy Street, Emison, Federated States Of Micronesia, 6618",
+    "Gender": true,
+    "City": "Cowiche",
+    "IsAcive": true,
+    "Status": false,
+    "DateOfBirth": "2001-03-03",
+    "Photos": [
+      {
+        "Url": "https://randomuser.me/api/portraits/men/40.jpg",
+        "Alt": "Fugiat ut incididunt quis exercitation nisi est aute commodo dolore laborum fugiat veniam aliqua.",
+        "IsMain": true,
+        "Description": "Ullamco sunt qui pariatur incididunt."
+      }
+    ],
+    "BankCards": [
+      {
+        "BankName": "Anastasia}",
+        "OwnerName": "Matthews Landry",
+        "Shaba": "IR 0236598000215632014598002",
+        "HesabNumber": "0215632014598002",
+        "CardNumber": 5986320015498532
+      }
+    ]
+  },
+  {
+    "Username": "farshadt20@gmail.com",
+    "Name": "Cruz Lyons",
+    "PhoneNumber": "09214730354",
+    "Address": "338 Tampa Court, Cumberland, Utah, 4341",
+    "Gender": true,
+    "City": "Glendale",
+    "IsAcive": true,
+    "Status": false,
+    "DateOfBirth": "1995-09-17",
+    "Photos": [
+      {
+        "Url": "https://randomuser.me/api/portraits/men/92.jpg",
+        "Alt": "Veniam reprehenderit occaecat laborum non tempor ipsum irure velit elit deserunt fugiat.",
+        "IsMain": true,
+        "Description": "Lorem duis ea labore aliquip ullamco."
+      }
+    ],
+    "BankCards": [
+      {
+        "BankName": "Newman}",
+        "OwnerName": "Hays Mathis",
+        "Shaba": "IR 0236598000215632014598002",
+        "HesabNumber": "0215632000098003",
+        "CardNumber": 5986320015498532
+      }
+    ]
+  }
+]

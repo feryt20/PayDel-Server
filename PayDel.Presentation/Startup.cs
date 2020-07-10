@@ -17,6 +17,8 @@ using Microsoft.OpenApi.Models;
 using PayDel.Common.Helpers;
 using PayDel.Data.DatabaseContext;
 using PayDel.Repo.Infrastructures;
+using PayDel.Services.Seed.Interface;
+using PayDel.Services.Seed.Service;
 using PayDel.Services.Site.Admin.Auth.Interface;
 using PayDel.Services.Site.Admin.Auth.Service;
 
@@ -35,6 +37,8 @@ namespace PayDel.Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddTransient<ISeedService , SeedService>();
             services.AddCors();
 
             //services.AddTransient();//false to use --> create instance from db for each request 
@@ -90,7 +94,7 @@ namespace PayDel.Presentation
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ISeedService seed)
         {
             if (env.IsDevelopment())
             {
@@ -113,6 +117,8 @@ namespace PayDel.Presentation
                     });
                 });
             }
+
+            seed.SeedUsers();
 
             app.UseCors(p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 

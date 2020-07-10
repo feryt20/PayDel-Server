@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Files\Json\UserSeedData.json" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <ProjectReference Include="..\PayDel.Services\PayDel.Services.csproj" />
@@ -12,6 +16,11 @@
 
   <ItemGroup>
     <Folder Include="Controllers\Site\App\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="Files\Json\UserSeedData.json" />
   </ItemGroup>
 
 

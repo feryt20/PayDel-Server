@@ -17,8 +17,12 @@ namespace PayDel.Repo.Infrastructures
             _db = db;
             _dbSet = _db.Set<TEntity>();
         }
-        
+
         #region normal
+        public int Count()
+        {
+            return _dbSet.Count();
+        }
         public void Insert(TEntity entity)
         {
             _dbSet.Add(entity);
@@ -70,11 +74,15 @@ namespace PayDel.Repo.Infrastructures
             return _dbSet.Where(where).AsEnumerable();
         }
 
-       
+
         #endregion normal
 
 
         #region Async
+        public async Task<int> CountAsync()
+        {
+            return await _dbSet.CountAsync();
+        }
         public async Task InsertAsync(TEntity entity)
         {
             if (entity == null)
