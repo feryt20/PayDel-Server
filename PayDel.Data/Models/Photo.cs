@@ -11,10 +11,17 @@ namespace PayDel.Data.Models
         {
             Id = Guid.NewGuid().ToString();
         }
+
         [Required]
+        [StringLength(150, MinimumLength = 1)]
         public string Url { get; set; }
+
+        [StringLength(150, MinimumLength = 0)]
         public string Alt { get; set; }
+
+        [StringLength(350, MinimumLength = 0)]
         public string Description { get; set; }
+
         [Required]
         public bool IsMain { get; set; }
 
