@@ -57,7 +57,7 @@ namespace PayDel.Presentation.Controllers.Site.Admin
                 Name = userForRegisterDto.Name,
                 UserName = userForRegisterDto.UserName,
                 PhoneNumber = userForRegisterDto.PhoneNumber,
-                DateOfBith = DateTime.Now,
+                DateOfBirth = DateTime.Now,
                 IsActive = true,
                 Confirmed = true,
             };

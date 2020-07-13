@@ -13,5 +13,15 @@ namespace PayDel.Common.Helpers
             httpResponse.Headers.Add("Access-Control-Expose-Header", "App-Error");
             httpResponse.Headers.Add("Access-Control-Allow-Origin", "*");
         }
+
+        public static int ToAge(this DateTime date)
+        {
+            var age = DateTime.Today.Year - date.Year;
+            if(date.AddYears(age) > DateTime.Today)
+            {
+                age--;
+            }
+            return age;
+        }
     }
 }

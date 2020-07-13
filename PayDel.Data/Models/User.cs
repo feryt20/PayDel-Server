@@ -29,7 +29,7 @@ namespace PayDel.Data.Models
         [Required]
         public byte[] PasswordSalt { get; set; }
         public bool Gender { get; set; }
-        public DateTime DateOfBith { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
         [StringLength(50, MinimumLength = 0)]
         public string City { get; set; }

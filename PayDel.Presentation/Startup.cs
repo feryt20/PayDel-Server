@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
@@ -38,6 +39,8 @@ namespace PayDel.Presentation
         {
             services.AddControllers();
 
+
+            services.AddAutoMapper(typeof(Startup));
             services.AddTransient<ISeedService , SeedService>();
             services.AddCors();
 
