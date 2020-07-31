@@ -13,7 +13,6 @@ using Xunit;
 
 namespace XUTest.ControllerTest
 {
-
     public class UserTest : IClassFixture<TestClientProvider<Startup>>
     {
         private HttpClient _client;
