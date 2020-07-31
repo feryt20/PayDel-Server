@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -12,6 +13,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -37,12 +39,17 @@ namespace PayDel.Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-
+            //services.AddControllers();
+            services.AddMvc(opt => opt.EnableEndpointRouting = false);
 
             services.AddAutoMapper(typeof(Startup));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            //services.AddHttpContextAccessor();
             services.AddTransient<ISeedService , SeedService>();
             services.AddCors();
+
+            services.Configure<SomeSetting>(Configuration.GetSection("SomeSetting"));
+
 
             //services.AddTransient();//false to use --> create instance from db for each request 
             //services.AddSingleton();//single instance of database
@@ -123,7 +130,7 @@ namespace PayDel.Presentation
 
             seed.SeedUsers();
 
-            app.UseCors(p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(p => p.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
 
             app.UseHttpsRedirection();
 
@@ -139,10 +146,16 @@ namespace PayDel.Presentation
                 c.SwaggerEndpoint("/swagger/v2/swagger.json", "My API");
             });
 
-            app.UseEndpoints(endpoints =>
+            app.UseStaticFiles(new StaticFileOptions()
             {
-                endpoints.MapControllers();
+                FileProvider= new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),@"Files")),
+                RequestPath= new PathString("/Files")
             });
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllers();
+            //});
+            app.UseMvc();
         }
     }
 }

@@ -25,6 +25,7 @@ namespace PayDel.Presentation.Helpers
 
             CreateMap<Photo, UserPhotoDto>();
             CreateMap<BankCard, UserBankCardDto>();
+            CreateMap<UserForUpdateDto, User>();
         }
     }
 }
