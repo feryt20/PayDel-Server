@@ -157,3 +157,7 @@ E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.cspr
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.pdb
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.genruntimeconfig.cache
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.TestHost.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\FluentAssertions.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.csproj.CoreCompileInputs.cache

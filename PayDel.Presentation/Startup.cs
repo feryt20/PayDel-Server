@@ -19,6 +19,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PayDel.Common.Helpers;
 using PayDel.Data.DatabaseContext;
+using PayDel.Presentation.Helpers;
 using PayDel.Repo.Infrastructures;
 using PayDel.Services.Seed.Interface;
 using PayDel.Services.Seed.Service;
@@ -56,6 +57,7 @@ namespace PayDel.Presentation
             services.AddScoped<IUnitOfWork<PayDelDbContext>, UnitOfWork<PayDelDbContext>>(); //normal between Singleton and Transiant
             services.AddScoped<IAuthService, AuthService>(); //normal between Singleton and Transiant
 
+            services.AddScoped<UserCheckIdFilter>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(opt =>
@@ -146,11 +148,7 @@ namespace PayDel.Presentation
                 c.SwaggerEndpoint("/swagger/v2/swagger.json", "My API");
             });
 
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                FileProvider= new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),@"Files")),
-                RequestPath= new PathString("/Files")
-            });
+          
             //app.UseEndpoints(endpoints =>
             //{
             //    endpoints.MapControllers();

@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using PayDel.Data.DatabaseContext;
 using PayDel.Data.Dtos.Site.Admin;
+using PayDel.Presentation.Helpers;
 using PayDel.Repo.Infrastructures;
 using PayDel.Services.Site.Admin.Auth.Interface;
 
@@ -48,40 +49,28 @@ namespace PayDel.Presentation.Controllers.Site.Admin
         }
 
         [HttpGet("{id}")]
+        [ServiceFilter(typeof(UserCheckIdFilter))]
         public async Task<IActionResult> GetUsers(string id)
         {
-            if(User.FindFirst(ClaimTypes.NameIdentifier).Value == id)
-            {
-                var user = await _db._UserRepository.GetAllAsync(p => p.Id == id, null, "Photos,BankCards");
-                //var userProfile = _mapper.Map<UserProfileDto>(user);// The Statement Above Returns IEnumerable But We Need Single User
-                var userProfile = _mapper.Map<UserProfileDto>(user.SingleOrDefault());
-                return Ok(userProfile);
-            }
-            else
-            {
-                return Unauthorized("شما به این اطلاعات دسترسی ندارید");
-            }
+            var user = await _db._UserRepository.GetAllAsync(p => p.Id == id, null, "Photos,BankCards");
+            //var userProfile = _mapper.Map<UserProfileDto>(user);// The Statement Above Returns IEnumerable But We Need Single User
+            var userProfile = _mapper.Map<UserProfileDto>(user.SingleOrDefault());
+            return Ok(userProfile);
         }
 
 
         [HttpPut("{id}")]
+        [ServiceFilter(typeof(UserCheckIdFilter))]
         public async Task<IActionResult> UpdateUser(string id, UserForUpdateDto userForUpdateDto)
         {
-            if (User.FindFirst(ClaimTypes.NameIdentifier).Value == id)
+            var user = await _db._UserRepository.GetByIdAsync(id);
+            var userRromRepo = _mapper.Map(userForUpdateDto, user);
+            _db._UserRepository.Update(userRromRepo);
+            if (await _db.SaveAcync() > 0)
             {
-                var user = await _db._UserRepository.GetByIdAsync(id);
-                var userRromRepo = _mapper.Map(userForUpdateDto, user);
-                _db._UserRepository.Update(userRromRepo);
-                if (await _db.SaveAcync() > 0)
-                {
-                    return NoContent();
-                }
-                return Ok();
+                return NoContent();
             }
-            else
-            {
-                return Unauthorized("شما به این اطلاعات دسترسی ندارید");
-            }
+            return Ok();
         }
     }
 }

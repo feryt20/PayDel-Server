@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "mo/MhlGjJJVB37QtYvaJOMXDxG4HB+O+wu1uypxe2xONUXqIQFz6uwCxNIVgWfsBpK0Zmks7ik4JLRyDVe1oyA==",
+  "dgSpecHash": "rd6nmSRJ1m1GoP/1raxWk+Aoq80QxPCQGzsTXz73DOcCph2xm2AH8I6tW1WF9jJXqNvSW2UYurC1w/+b+528Qw==",
   "success": true,
   "projectFilePath": "E:\\Projects\\visual studio 2019\\PayDel\\XUTest\\XUTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Farshad\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\Farshad\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.0\\automapper.extensions.microsoft.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\Farshad\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
+    "C:\\Users\\Farshad\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
     "C:\\Users\\Farshad\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.5\\microsoft.aspnetcore.authentication.jwtbearer.3.1.5.nupkg.sha512",
     "C:\\Users\\Farshad\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\Farshad\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
