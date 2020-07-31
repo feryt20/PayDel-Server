@@ -1,7 +1,9 @@
 ﻿using FluentAssertions;
+using PayDel.Data.Dtos.Site.Admin;
 using PayDel.Presentation;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -114,6 +116,47 @@ namespace XUTest.ControllerTest
             //Assert
             response.EnsureSuccessStatusCode();
             Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
+        }
+
+
+
+        [Fact]
+        public async Task UpdateUser_ModelStateError()
+        {
+            // Arrange
+            string userHimselfId = "faa8c440-79bc-4b36-8e1c-b7fd346e0430";
+            var request = new
+            {
+                Url = "/site/admin/Users/" + userHimselfId,
+                Body = new UserForUpdateDto
+                {
+                    Name = string.Empty,
+                    PhoneNumber = string.Empty,
+                    Address = string.Empty,
+                    City = "لورم ایپسوم متن ساختگی با تولید سادگلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه مجله در ستون و سطر آنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی درلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه مجله در ستون و سطر آنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی درلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه مجله در ستون و سطر آنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی دری نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه مجله در ستون و سطر آنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در."
+                }
+            };
+            _client.DefaultRequestHeaders.Authorization
+           = new AuthenticationHeaderValue("Bearer", _AToken);
+
+            var controller = new ModelStateControllerTests();
+
+
+            //Act
+            var response = await _client.PutAsync(request.Url, ContentHelper.GetStringContent(request.Body));
+            var value = await response.Content.ReadAsStringAsync();
+
+            controller.ValidateModelState(request.Body);
+            var modelState = controller.ModelState;
+
+            //Assert
+            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+
+            //Assert.False(modelState.IsValid);
+            //Assert.Equal(4, modelState.Keys.Count());
+            //Assert.True(modelState.Keys.Contains("Name") && modelState.Keys.Contains("PhoneNumber")
+            //    && modelState.Keys.Contains("Address") && modelState.Keys.Contains("City"));
+
         }
     }
 }

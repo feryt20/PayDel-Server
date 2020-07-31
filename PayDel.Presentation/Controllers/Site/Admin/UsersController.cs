@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using PayDel.Common.ErrorsAndMessages;
 using PayDel.Data.DatabaseContext;
 using PayDel.Data.Dtos.Site.Admin;
 using PayDel.Presentation.Helpers;
@@ -70,7 +71,16 @@ namespace PayDel.Presentation.Controllers.Site.Admin
             {
                 return NoContent();
             }
-            return Ok();
+            else
+            {
+                _logger.LogError($"کاربر   {userForUpdateDto.Name} اپدیت نشد");
+                return BadRequest(new ReturnMessage()
+                {
+                    status = false,
+                    title = "خطا",
+                    message = $"ویرایش برای کاربر {userForUpdateDto.Name} انجام نشد."
+                });
+            }
         }
     }
 }

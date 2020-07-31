@@ -44,7 +44,16 @@ namespace PayDel.Repo.Infrastructures
 
         public async Task<int> SaveAcync()
         {
-            return await _db.SaveChangesAsync();
+            try
+            {
+                return await _db.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
+            
         }
         #endregion
 

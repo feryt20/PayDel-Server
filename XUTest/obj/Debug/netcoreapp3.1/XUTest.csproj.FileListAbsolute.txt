@@ -13,7 +13,10 @@ E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\XUTest.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\XUTest.pdb
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\AutoMapper.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Castle.Core.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\FluentAssertions.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.TestHost.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
@@ -48,6 +51,7 @@ E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.T
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\testhost.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Moq.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\NLog.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
@@ -60,6 +64,7 @@ E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\System.Coll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\xunit.abstractions.dll
@@ -153,11 +158,8 @@ E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\PayDel.Serv
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.csprojAssemblyReference.cache
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.AssemblyInfoInputs.cache
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.AssemblyInfo.cs
+E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.csproj.CoreCompileInputs.cache
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.csproj.CopyComplete
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.pdb
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.genruntimeconfig.cache
-E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.TestHost.dll
-E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
-E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\FluentAssertions.dll
-E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.csproj.CoreCompileInputs.cache
