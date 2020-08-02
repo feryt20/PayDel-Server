@@ -27,13 +27,11 @@ namespace PayDel.Presentation.Controllers.Site.Admin
         private readonly IUnitOfWork<PayDelDbContext> _db;
         private readonly IMapper _mapper;
         private readonly ILogger<UsersController> _logger;
-        private readonly IHttpContextAccessor _httpContextAccessor;
-        public UsersController(IUnitOfWork<PayDelDbContext> dbContext, IMapper mapper, ILogger<UsersController> logger, IHttpContextAccessor httpContextAccessor)
+        public UsersController(IUnitOfWork<PayDelDbContext> dbContext, IMapper mapper, ILogger<UsersController> logger)
         {
             _db = dbContext;
             _mapper = mapper;
             _logger = logger;
-            _httpContextAccessor = httpContextAccessor;
         }
 
 

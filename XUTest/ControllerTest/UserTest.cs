@@ -152,10 +152,10 @@ namespace XUTest.ControllerTest
             //Assert
             Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
 
-            //Assert.False(modelState.IsValid);
-            //Assert.Equal(4, modelState.Keys.Count());
-            //Assert.True(modelState.Keys.Contains("Name") && modelState.Keys.Contains("PhoneNumber")
-            //    && modelState.Keys.Contains("Address") && modelState.Keys.Contains("City"));
+            Assert.False(modelState.IsValid);
+            Assert.Equal(4, modelState.Keys.Count());
+            Assert.True(modelState.Keys.Contains("Name") && modelState.Keys.Contains("PhoneNumber")
+                && modelState.Keys.Contains("Address") && modelState.Keys.Contains("City"));
 
         }
     }
