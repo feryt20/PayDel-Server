@@ -2050,22 +2050,6 @@
         "runtime": {
           "PayDel.Services.dll": {}
         }
-      },
-      "NWebsec.AspNetCore.Core/3.0.0.0": {
-        "runtime": {
-          "NWebsec.AspNetCore.Core.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
-          }
-        }
-      },
-      "NWebsec.AspNetCore.Middleware/3.0.0.0": {
-        "runtime": {
-          "NWebsec.AspNetCore.Middleware.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
-          }
-        }
       }
     }
   },
@@ -3420,16 +3404,6 @@
     },
     "PayDel.Services/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "NWebsec.AspNetCore.Core/3.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "NWebsec.AspNetCore.Middleware/3.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

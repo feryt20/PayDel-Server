@@ -36,6 +36,7 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
 
         [AllowAnonymous]
         [HttpGet]
+        [ResponseCache(Duration = 600)]
         public async Task<IActionResult> GetUsers()
         {
             _logger.LogError($"گاربر گرامی آقا/خانم شما اجازه ویرایش این کاربر را ندارید ");

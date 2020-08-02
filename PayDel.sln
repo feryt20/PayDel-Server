@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayDel.Services", "PayDel.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayDel.Presentation", "PayDel.Presentation\PayDel.Presentation.csproj", "{4596634F-CC76-443B-AC33-3C53D18BC843}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUTest", "XUTest\XUTest.csproj", "{35330332-20E4-49CA-9955-622C6767E32B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUTest", "XUTest\XUTest.csproj", "{35330332-20E4-49CA-9955-622C6767E32B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayDel.IdServer", "PayDel.IdServer\PayDel.IdServer.csproj", "{42498E6A-3496-414A-9CB6-69C9FD1989E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{35330332-20E4-49CA-9955-622C6767E32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35330332-20E4-49CA-9955-622C6767E32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35330332-20E4-49CA-9955-622C6767E32B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42498E6A-3496-414A-9CB6-69C9FD1989E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42498E6A-3496-414A-9CB6-69C9FD1989E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42498E6A-3496-414A-9CB6-69C9FD1989E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42498E6A-3496-414A-9CB6-69C9FD1989E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

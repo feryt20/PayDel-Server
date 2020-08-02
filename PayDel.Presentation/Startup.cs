@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -58,6 +59,9 @@ namespace PayDel.Presentation
             //    opt.IncludeSubDomains = true;
             //    opt.Preload = true;
             //});
+
+            services.AddResponseCaching();
+            services.AddResponseCompression(opt=>opt.Providers.Add<GzipCompressionProvider>());
 
             services.AddRouting(opt => opt.LowercaseUrls = true);
             services.AddAutoMapper(typeof(Startup));
@@ -144,7 +148,9 @@ namespace PayDel.Presentation
                 });
                 //app.UseHsts();
             }
-            
+
+            app.UseResponseCaching();
+            app.UseResponseCompression();
 
             seed.SeedUsers();
 
