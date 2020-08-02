@@ -63,5 +63,10 @@ namespace XUTest.Moq
                 ImageUrl = "qqq"
             };
         }
+
+        public static readonly UserForUpdateDto userForUpdateDto_Fail = new UserForUpdateDto()
+        {
+            Name = "kldlsdnf"
+        };
     }
 }

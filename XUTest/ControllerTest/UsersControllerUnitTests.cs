@@ -13,6 +13,7 @@ using PayDel.Data.Models;
 using System.Linq;
 using PayDel.Data.Dtos.Site.Admin;
 using Microsoft.AspNetCore.Mvc;
+using PayDel.Common.ErrorsAndMessages;
 
 namespace XUTest.ControllerTest
 {
@@ -80,23 +81,58 @@ namespace XUTest.ControllerTest
         public async Task UpdateUser_Success_UpdateUserHimself()
         {
             //Arrange------------------------------------------------------------------------------------------------------------------------------
+            var users = UsersControllerData.GetUser();
+            //var userForDetailedDto = UsersControllerMockData.GetUserForDetailedDto();
+            _mockRepo.Setup(x => x._UserRepository
+                .GetByIdAsync(
+                    It.IsAny<string>())).ReturnsAsync(() => users.First());
 
+            _mockRepo.Setup(x => x._UserRepository
+                .Update(
+                    It.IsAny<User>()));
+
+            _mockRepo.Setup(x => x.SaveAcync()).ReturnsAsync(1);
+            //
+            _mockMapper.Setup(x => x.Map(It.IsAny<UserForUpdateDto>(), It.IsAny<User>()))
+                .Returns(users.First());
 
             //Act----------------------------------------------------------------------------------------------------------------------------------
 
+            var result = await _controller.UpdateUser(It.IsAny<string>(), It.IsAny<UserForUpdateDto>());
+            var okResult = result as NoContentResult;
             //Assert-------------------------------------------------------------------------------------------------------------------------------
 
+            Assert.NotNull(okResult);
+            Assert.Equal(204, okResult.StatusCode);
         }
         [Fact]
         public async Task UpdateUser_Fail_UpdateAnOtherUser()
         {
             //Arrange------------------------------------------------------------------------------------------------------------------------------
+            var users = UsersControllerData.GetUser();
+            //var userForDetailedDto = UsersControllerMockData.GetUserForDetailedDto();
+            _mockRepo.Setup(x => x._UserRepository
+                .GetByIdAsync(
+                    It.IsAny<string>())).ReturnsAsync(() => users.First());
 
+            _mockRepo.Setup(x => x._UserRepository
+                .Update(
+                    It.IsAny<User>()));
+
+            _mockRepo.Setup(x => x.SaveAcync()).ReturnsAsync(0);
+            //
+            _mockMapper.Setup(x => x.Map(It.IsAny<UserForUpdateDto>(), It.IsAny<User>()))
+                .Returns(users.First());
+            //
 
             //Act----------------------------------------------------------------------------------------------------------------------------------
-
+            var result = await _controller.UpdateUser(It.IsAny<string>(), UsersControllerData.userForUpdateDto_Fail);
+            var badResult = result as BadRequestObjectResult;
             //Assert-------------------------------------------------------------------------------------------------------------------------------
 
+            Assert.NotNull(badResult);
+            Assert.IsType<ReturnMessage>(badResult.Value);
+            Assert.Equal(400, badResult.StatusCode);
         }
         [Fact]
         public async Task UpdateUser_Fail_ModelStateError()
