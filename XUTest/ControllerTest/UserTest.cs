@@ -22,7 +22,7 @@ namespace XUTest.ControllerTest
         {
             _client = testClientProvider.Client;
             _UnToken = "";
-            _AToken = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmYWE4YzQ0MC03OWJjLTRiMzYtOGUxYy1iN2ZkMzQ2ZTA0MzAiLCJ1bmlxdWVfbmFtZSI6ImZhcnNoYWR0MjBAeWFob28uY29tIiwibmJmIjoxNTk2MzU0Mzg1LCJleHAiOjE1OTY1MjcxODUsImlhdCI6MTU5NjM1NDM4NX0.itUZ3X99ncaWQTLawCN1rVribsBQ55T24cJs4jc-kzHEwpekUmtV7iNmkeNxHATXCTIdPpqTUTSe0SujhZDjBA";
+            _AToken = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmYWE4YzQ0MC03OWJjLTRiMzYtOGUxYy1iN2ZkMzQ2ZTA0MzAiLCJ1bmlxdWVfbmFtZSI6ImZhcnNoYWR0MjBAeWFob28uY29tIiwibmJmIjoxNTk2MzY4NjAyLCJleHAiOjE1OTY1NDE0MDIsImlhdCI6MTU5NjM2ODYwMn0.Hieba2zUEgXXPefoVo_Og3yzSxBANU1NLUTHoa7oSoekr4Abs4-uILMkew23nGBg0HGWvc32d8hWPw__RIHWvA";
         }
         [Fact]
         public async void GetUsers_Unauthorized_User_CantGetUsers()

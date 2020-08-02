@@ -11,10 +11,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -41,33 +39,37 @@ namespace PayDel.Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddControllers();
             services.AddMvc(opt =>
             {
                 opt.EnableEndpointRouting = false;
                 opt.ReturnHttpNotAcceptable = true;
 
-                var jsonFormatter = opt.OutputFormatters.OfType<SystemTextJsonOutputFormatter>().Single();
-                opt.OutputFormatters.Remove(jsonFormatter);
-                opt.OutputFormatters.Add(new IonOutputFormatter(jsonFormatter));
+                //var jsonFormatter = opt.OutputFormatters.OfType<SystemTextJsonOutputFormatter>().Single();
+                //opt.OutputFormatters.Remove(jsonFormatter);
+                //opt.OutputFormatters.Add(new IonOutputFormatter(jsonFormatter));
 
-                opt.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
-                opt.InputFormatters.Add(new XmlSerializerInputFormatter(opt));
+                //opt.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
+                //opt.InputFormatters.Add(new XmlSerializerInputFormatter(opt));
             });
 
-            services.AddRouting(opt => opt.LowercaseUrls = true);
+            //services.AddHsts(opt =>
+            //{
+            //    opt.MaxAge = TimeSpan.FromDays(180);
+            //    opt.IncludeSubDomains = true;
+            //    opt.Preload = true;
+            //});
 
+            services.AddRouting(opt => opt.LowercaseUrls = true);
             services.AddAutoMapper(typeof(Startup));
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //services.AddHttpContextAccessor();
+            services.AddHttpContextAccessor();
             services.AddTransient<ISeedService, SeedService>();
             services.AddCors();
 
             services.Configure<SomeSetting>(Configuration.GetSection("SomeSetting"));
 
 
-            //services.AddTransient();//false to use --> create instance from db for each request 
-            //services.AddSingleton();//single instance of database
+            //////services.AddTransient();//false to use --> create instance from db for each request 
+            //////services.AddSingleton();//single instance of database
             services.AddScoped<IUnitOfWork<PayDelDbContext>, UnitOfWork<PayDelDbContext>>(); //normal between Singleton and Transiant
             services.AddScoped<IAuthService, AuthService>(); //normal between Singleton and Transiant
 
@@ -88,8 +90,6 @@ namespace PayDel.Presentation
 
             services.AddSwaggerGen(c =>
             {
-                //c.SwaggerDoc("v1", new OpenApiInfo{Title = "My API",Version = "v1"});
-
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API - Site", Version = "v1" });
                 c.SwaggerDoc("v2", new OpenApiInfo { Title = "My API - Api", Version = "v2" });
 
@@ -142,7 +142,9 @@ namespace PayDel.Presentation
                         }
                     });
                 });
+                //app.UseHsts();
             }
+            
 
             seed.SeedUsers();
 
@@ -163,10 +165,11 @@ namespace PayDel.Presentation
             });
 
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllers();
-            //});
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                RequestPath = new PathString("/wwwroot")
+            });
+            
             app.UseMvc();
         }
     }
