@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using AutoMapper;
 using PayDel.Data.DatabaseContext;
-using PayDel.Presentation.Controllers.Site.Admin;
+using PayDel.Presentation.Controllers.Site.V1.Admin;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
@@ -63,7 +63,7 @@ namespace XUTest.ControllerTest
             Assert.Equal(200, okResult.StatusCode);
         }
         [Fact]
-        public async Task GetUser_Fail_GetAnOtherUser()
+        public void GetUser_Fail_GetAnOtherUser()
         {
             //Arrange------------------------------------------------------------------------------------------------------------------------------
 
@@ -135,7 +135,7 @@ namespace XUTest.ControllerTest
             Assert.Equal(400, badResult.StatusCode);
         }
         [Fact]
-        public async Task UpdateUser_Fail_ModelStateError()
+        public void UpdateUser_Fail_ModelStateError()
         {
             //Arrange------------------------------------------------------------------------------------------------------------------------------
 
@@ -150,7 +150,7 @@ namespace XUTest.ControllerTest
 
         #region ChangeUserPasswordTests
         [Fact]
-        public async Task ChangeUserPassword_Success_Himself()
+        public void ChangeUserPassword_Success_Himself()
         {
             //Arrange------------------------------------------------------------------------------------------------------------------------------
 
@@ -161,7 +161,7 @@ namespace XUTest.ControllerTest
 
         }
         [Fact]
-        public async Task ChangeUserPassword_Fail_AnOtherUser()
+        public void ChangeUserPassword_Fail_AnOtherUser()
         {
             //Arrange------------------------------------------------------------------------------------------------------------------------------
 
@@ -172,7 +172,7 @@ namespace XUTest.ControllerTest
 
         }
         [Fact]
-        public async Task ChangeUserPassword_Fail_Himself_WrongOldPassword()
+        public void ChangeUserPassword_Fail_Himself_WrongOldPassword()
         {
             //Arrange------------------------------------------------------------------------------------------------------------------------------
 
@@ -183,7 +183,7 @@ namespace XUTest.ControllerTest
 
         }
         [Fact]
-        public async Task ChangeUserPassword_Fail_ModelStateError()
+        public void ChangeUserPassword_Fail_ModelStateError()
         {
             //Arrange------------------------------------------------------------------------------------------------------------------------------
 

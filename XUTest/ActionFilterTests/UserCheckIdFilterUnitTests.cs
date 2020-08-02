@@ -27,7 +27,7 @@ namespace XUTest.ActionFilterTests
             _mockLogger = new Mock<ILogger<UserCheckIdFilter>>();
         }
         [Fact]
-        public async Task UserCheckIdFilter_Success_UserIdHimself()
+        public void UserCheckIdFilter_Success_UserIdHimself()
         {
             //Arrange------------------------------------------------------------------------------------------------------------------------------
             var userId = "0d47394e-672f-4db7-898c-bfd8f32e2af7";
@@ -71,7 +71,7 @@ namespace XUTest.ActionFilterTests
             //Assert.IsType<UnauthorizedResult>(context.Result);
         }
         [Fact]
-        public async Task UserCheckIdFilter_Fail_UserIdAnOther()
+        public void UserCheckIdFilter_Fail_UserIdAnOther()
         {
             //Arrange------------------------------------------------------------------------------------------------------------------------------
             var userId = "0d47394e-672f-4db7-898c-bfd8f32e2af7";

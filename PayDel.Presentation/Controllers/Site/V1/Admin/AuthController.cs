@@ -17,10 +17,10 @@ using PayDel.Data.Models;
 using PayDel.Repo.Infrastructures;
 using PayDel.Services.Site.Admin.Auth.Interface;
 
-namespace PayDel.Presentation.Controllers.Site.Admin
+namespace PayDel.Presentation.Controllers.Site.V1.Admin
 {
     
-    [Route("site/admin/[controller]")]
+    [Route("v1/site/admin/[controller]")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "v1")]
     public class AuthController : ControllerBase

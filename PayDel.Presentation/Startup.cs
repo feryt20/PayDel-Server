@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
@@ -41,12 +42,25 @@ namespace PayDel.Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddControllers();
-            services.AddMvc(opt => opt.EnableEndpointRouting = false);
+            services.AddMvc(opt =>
+            {
+                opt.EnableEndpointRouting = false;
+                opt.ReturnHttpNotAcceptable = true;
+
+                var jsonFormatter = opt.OutputFormatters.OfType<SystemTextJsonOutputFormatter>().Single();
+                opt.OutputFormatters.Remove(jsonFormatter);
+                opt.OutputFormatters.Add(new IonOutputFormatter(jsonFormatter));
+
+                opt.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
+                opt.InputFormatters.Add(new XmlSerializerInputFormatter(opt));
+            });
+
+            services.AddRouting(opt => opt.LowercaseUrls = true);
 
             services.AddAutoMapper(typeof(Startup));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //services.AddHttpContextAccessor();
-            services.AddTransient<ISeedService , SeedService>();
+            services.AddTransient<ISeedService, SeedService>();
             services.AddCors();
 
             services.Configure<SomeSetting>(Configuration.GetSection("SomeSetting"));
@@ -101,7 +115,7 @@ namespace PayDel.Presentation
                     }
                   });
             });
-           
+
         }
 
 
@@ -148,7 +162,7 @@ namespace PayDel.Presentation
                 c.SwaggerEndpoint("/swagger/v2/swagger.json", "My API");
             });
 
-          
+
             //app.UseEndpoints(endpoints =>
             //{
             //    endpoints.MapControllers();

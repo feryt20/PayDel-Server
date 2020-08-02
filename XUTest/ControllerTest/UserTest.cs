@@ -28,7 +28,7 @@ namespace XUTest.ControllerTest
         public async void GetUsers_Unauthorized_User_CantGetUsers()
         {
             // Arrange
-            var request = "/site/admin/Users";
+            var request = "/v1/site/admin/Users";
 
             _client.DefaultRequestHeaders.Authorization
            = new AuthenticationHeaderValue("Bearer", _UnToken);
@@ -49,7 +49,7 @@ namespace XUTest.ControllerTest
             // Arrange
             _client.DefaultRequestHeaders.Authorization
                 = new AuthenticationHeaderValue("Bearer", _AToken);
-            var request = "/site/admin/Users";
+            var request = "/v1/site/admin/Users";
 
             //Failed
             //Succeeded
@@ -71,7 +71,7 @@ namespace XUTest.ControllerTest
 
             var request = new
             {
-                Url = "/site/admin/Users/" + anOtherUserId,
+                Url = "/v1/site/admin/Users/" + anOtherUserId,
                 Body = new
                 {
                     Name = "علی حسینی",
@@ -96,7 +96,7 @@ namespace XUTest.ControllerTest
 
             var request = new
             {
-                Url = "/site/admin/Users/" + userHimselfId,
+                Url = "/v1/site/admin/Users/" + userHimselfId,
                 Body = new
                 {
                     Name = "فرشاد کلهر",
@@ -127,7 +127,7 @@ namespace XUTest.ControllerTest
             string userHimselfId = "faa8c440-79bc-4b36-8e1c-b7fd346e0430";
             var request = new
             {
-                Url = "/site/admin/Users/" + userHimselfId,
+                Url = "/v1/site/admin/Users/" + userHimselfId,
                 Body = new UserForUpdateDto
                 {
                     Name = string.Empty,

@@ -16,10 +16,10 @@ using PayDel.Presentation.Helpers;
 using PayDel.Repo.Infrastructures;
 using PayDel.Services.Site.Admin.Auth.Interface;
 
-namespace PayDel.Presentation.Controllers.Site.Admin
+namespace PayDel.Presentation.Controllers.Site.V1.Admin
 {
     [Authorize]
-    [Route("site/admin/[controller]")]
+    [Route("v1/site/admin/[controller]")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "v1")]
     public class UsersController : ControllerBase
@@ -34,7 +34,7 @@ namespace PayDel.Presentation.Controllers.Site.Admin
             _logger = logger;
         }
 
-
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
