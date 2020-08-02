@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "M9hTinUI6Z3z73oeUdW8Y9iCMqlGwiabYxnUMdWoTGNEtUrUV+Tu9xDjUp0/nXru/3OpxrhGooZemrdCNSr46Q==",
+  "dgSpecHash": "jAKSj+YwR6Hcw5ENmACpZ39yOR1sFe0h5qTLvuUV3mVUNOytNsrE01t+oQD6QSHKUsHRU+3BAh37IscdYzF6Tg==",
   "success": true,
   "projectFilePath": "E:\\Projects\\visual studio 2019\\PayDel\\XUTest\\XUTest.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,9 @@
     "C:\\Users\\Farshad\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Farshad\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\Farshad\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
+    "C:\\Users\\Farshad\\.nuget\\packages\\identitymodel\\4.0.0\\identitymodel.4.0.0.nupkg.sha512",
+    "C:\\Users\\Farshad\\.nuget\\packages\\identitymodel.aspnetcore.oauth2introspection\\4.0.1\\identitymodel.aspnetcore.oauth2introspection.4.0.1.nupkg.sha512",
+    "C:\\Users\\Farshad\\.nuget\\packages\\identityserver4.accesstokenvalidation\\3.0.1\\identityserver4.accesstokenvalidation.3.0.1.nupkg.sha512",
     "C:\\Users\\Farshad\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Farshad\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Farshad\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.5\\microsoft.aspnetcore.authentication.jwtbearer.3.1.5.nupkg.sha512",

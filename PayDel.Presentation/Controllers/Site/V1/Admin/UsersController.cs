@@ -34,7 +34,7 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
             _logger = logger;
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpGet]
         [ResponseCache(Duration = 600)]
         public async Task<IActionResult> GetUsers()

@@ -15,7 +15,7 @@ namespace PayDel.IdServer.Providers
             {
                 new ApiResource("invoices", "Invoice API")
                 {
-                    Scopes = { "invoice.read", "invoice.pay", "manage" }
+                    Scopes = { "read", "write", "delete" }
                 },
 
                 new ApiResource("customers", "Customer API")

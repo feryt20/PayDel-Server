@@ -79,17 +79,25 @@ namespace PayDel.Presentation
 
             services.AddScoped<UserCheckIdFilter>();
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(opt =>
-                {
-                    opt.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
-                        ValidateIssuer = false,
-                        ValidateAudience = false,
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddJwtBearer(opt =>
+            //    {
+            //        opt.TokenValidationParameters = new TokenValidationParameters
+            //        {
+            //            ValidateIssuerSigningKey = true,
+            //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
+            //            ValidateIssuer = false,
+            //            ValidateAudience = false,
 
-                    };
+            //        };
+            //    });
+
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication(opt =>
+                {
+                    opt.Authority = "http://localhost:5000";
+                    opt.RequireHttpsMetadata = false;
+                    opt.ApiName = "invoices";
                 });
 
             services.AddSwaggerGen(c =>
