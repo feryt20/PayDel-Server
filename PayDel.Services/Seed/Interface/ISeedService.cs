@@ -7,6 +7,7 @@ namespace PayDel.Services.Seed.Interface
 {
     public interface ISeedService
     {
+        Task SeedUsersAsync();
         void SeedUsers();
     }
 }

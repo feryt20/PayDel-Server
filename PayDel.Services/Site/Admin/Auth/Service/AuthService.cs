@@ -25,10 +25,10 @@ namespace PayDel.Services.Site.Admin.Auth.Service
             {
                 return null;
             }
-            if(!Utilities.VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
-            {
-                return null;
-            }
+            //if(!Utilities.VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+            //{
+            //    return null;
+            //}
 
             return user;
         }
@@ -39,8 +39,8 @@ namespace PayDel.Services.Site.Admin.Auth.Service
 
             Utilities.CreatePasswordHash(password, out passwordHash, out passwordSalt);
 
-            user.PasswordHash = passwordHash;
-            user.PasswordSalt = passwordSalt;
+            //user.PasswordHash = passwordHash;
+            //user.PasswordSalt = passwordSalt;
 
             await _db._UserRepository.InsertAsync(user);
             await _db.SaveAcync();

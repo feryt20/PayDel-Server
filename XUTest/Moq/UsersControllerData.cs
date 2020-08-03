@@ -15,12 +15,12 @@ namespace XUTest.Moq
                 new User
                 {
                     Id = "0d47394e-672f-4db7-898c-bfd8f32e2af7",
-                    DateCreated = DateTime.Now,
-                    DateModified = DateTime.Now,
+                    //DateCreated = DateTime.Now,
+                    //DateModified = DateTime.Now,
                     DateOfBirth = DateTime.Now,
                     LastActive = DateTime.Now,
-                    PasswordHash =new byte[255],
-                    PasswordSalt = new byte[255],
+                    PasswordHash ="",
+                    //PasswordSalt = new byte[255],
                     UserName = "haysmathis@barkarama.com",
                     Name = "Holloway Vasquez",
                     PhoneNumber = "55",

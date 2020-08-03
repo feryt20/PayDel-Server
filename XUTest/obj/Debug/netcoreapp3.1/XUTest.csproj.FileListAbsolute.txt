@@ -15,7 +15,13 @@ E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\AutoMapper.
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Castle.Core.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\FluentAssertions.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\IdentityModel.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\IdentityModel.AspNetCore.OAuth2Introspection.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\IdentityServer4.AccessTokenValidation.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.TestHost.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
@@ -35,6 +41,8 @@ E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.E
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
@@ -166,6 +174,3 @@ E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.cspr
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.pdb
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.genruntimeconfig.cache
-E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\IdentityModel.dll
-E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\IdentityModel.AspNetCore.OAuth2Introspection.dll
-E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\IdentityServer4.AccessTokenValidation.dll

@@ -1,33 +1,20 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace PayDel.Data.Models
 {
-    public class User : BaseEntity<string>
+    public class User : IdentityUser
     {
-        public User()
-        {
-            Id = Guid.NewGuid().ToString();
-        }
 
         [Required]
         [StringLength(100, MinimumLength = 0)]
         public string Name { get; set; }
 
-        [Required]
-        public string UserName { get; set; }
-
-        [Required]
-        [StringLength(11, MinimumLength = 11)]
-        public string PhoneNumber { get; set; }
-
-        [Required]
-        public byte[] PasswordHash { get; set; }
-
-        [Required]
-        public byte[] PasswordSalt { get; set; }
+        //[Required]
+        //public byte[] PasswordSalt { get; set; }
         public bool Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
 
@@ -55,6 +42,6 @@ namespace PayDel.Data.Models
         public ICollection<BankCard> BankCards { get; set; }
         //public string Created { get; set; }
         //public string Created { get; set; }
-
+        public ICollection<UserRole> UserRoles { get; set; }
     }
 }

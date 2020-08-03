@@ -20,6 +20,7 @@ using PayDel.Services.Site.Admin.Auth.Interface;
 namespace PayDel.Presentation.Controllers.Site.V1.Admin
 {
     
+    [AllowAnonymous]
     [Route("v1/site/admin/[controller]")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "v1")]
@@ -107,7 +108,6 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
         }
 
 
-        [Authorize]
         [HttpGet("getval")]
         public async Task<ActionResult<IEnumerable<string>>> Get()
         {

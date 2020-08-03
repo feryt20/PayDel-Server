@@ -18,7 +18,6 @@ using PayDel.Services.Site.Admin.Auth.Interface;
 
 namespace PayDel.Presentation.Controllers.Site.V1.Admin
 {
-    [Authorize]
     [Route("v1/site/admin/[controller]")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "v1")]

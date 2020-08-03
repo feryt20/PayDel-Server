@@ -1,5 +1,6 @@
 [
   {
+    "Email": "farshadt20@yahoo.com",
     "Username": "farshadt20@yahoo.com",
     "Name": "Stanton Hatfield",
     "PhoneNumber": "09104717184",
@@ -7,7 +8,7 @@
     "Gender": true,
     "City": "Cowiche",
     "IsAcive": true,
-    "Status": false,
+    "EmailConfirmed": false,
     "DateOfBirth": "2001-03-03",
     "Photos": [
       {
@@ -28,6 +29,7 @@
     ]
   },
   {
+    "Email": "farshadt20@gmail.com",
     "Username": "farshadt20@gmail.com",
     "Name": "Cruz Lyons",
     "PhoneNumber": "09214730354",
@@ -35,7 +37,7 @@
     "Gender": true,
     "City": "Glendale",
     "IsAcive": true,
-    "Status": false,
+    "EmailConfirmed": false,
     "DateOfBirth": "1995-09-17",
     "Photos": [
       {

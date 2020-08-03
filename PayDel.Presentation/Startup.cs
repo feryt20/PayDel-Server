@@ -7,11 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -19,6 +23,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PayDel.Common.Helpers;
 using PayDel.Data.DatabaseContext;
+using PayDel.Data.Models;
 using PayDel.Presentation.Helpers;
 using PayDel.Repo.Infrastructures;
 using PayDel.Services.Seed.Interface;
@@ -40,10 +45,16 @@ namespace PayDel.Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<PayDelDbContext>(p=>p.UseSqlServer("Data Source=(local);Initial Catalog=PayDelDb;Integrated Security=true;MultipleActiveResultSets=True;"));
+
             services.AddMvc(opt =>
             {
                 opt.EnableEndpointRouting = false;
                 opt.ReturnHttpNotAcceptable = true;
+
+                var policy = new AuthorizationPolicyBuilder()
+                .RequireAuthenticatedUser().Build();
+                opt.Filters.Add(new AuthorizeFilter(policy));
 
                 //var jsonFormatter = opt.OutputFormatters.OfType<SystemTextJsonOutputFormatter>().Single();
                 //opt.OutputFormatters.Remove(jsonFormatter);
@@ -60,13 +71,49 @@ namespace PayDel.Presentation
             //    opt.Preload = true;
             //});
 
+            IdentityBuilder builder = services.AddIdentityCore<User>(opt =>
+            {
+                opt.Password.RequireDigit = false;
+                opt.Password.RequiredLength = 4;
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireUppercase = false;
+            });
+            builder = new IdentityBuilder(builder.UserType, typeof(Role), builder.Services);
+            builder.AddEntityFrameworkStores<PayDelDbContext>();
+            builder.AddRoleValidator<RoleValidator<Role>>();
+            builder.AddRoleManager<RoleManager<Role>>();
+            builder.AddSignInManager<SignInManager<User>>();
+            builder.AddDefaultTokenProviders();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+               .AddJwtBearer(opt =>
+               {
+                   opt.TokenValidationParameters = new TokenValidationParameters
+                   {
+                       ValidateIssuerSigningKey = true,
+                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
+                       ValidateIssuer = false,
+                       ValidateAudience = false,
+                   };
+               });
+
+            //services.AddAuthentication("Bearer")
+            //    .AddIdentityServerAuthentication(opt =>
+            //    {
+            //        opt.Authority = "http://localhost:5000";
+            //        opt.RequireHttpsMetadata = false;
+            //        opt.ApiName = "invoices";
+            //    });
+
+
+
             services.AddResponseCaching();
             services.AddResponseCompression(opt=>opt.Providers.Add<GzipCompressionProvider>());
 
             services.AddRouting(opt => opt.LowercaseUrls = true);
             services.AddAutoMapper(typeof(Startup));
             services.AddHttpContextAccessor();
-            services.AddTransient<ISeedService, SeedService>();
+            services.AddTransient<SeedService>();
             services.AddCors();
 
             services.Configure<SomeSetting>(Configuration.GetSection("SomeSetting"));
@@ -79,26 +126,7 @@ namespace PayDel.Presentation
 
             services.AddScoped<UserCheckIdFilter>();
 
-            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            //    .AddJwtBearer(opt =>
-            //    {
-            //        opt.TokenValidationParameters = new TokenValidationParameters
-            //        {
-            //            ValidateIssuerSigningKey = true,
-            //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
-            //            ValidateIssuer = false,
-            //            ValidateAudience = false,
-
-            //        };
-            //    });
-
-            services.AddAuthentication("Bearer")
-                .AddIdentityServerAuthentication(opt =>
-                {
-                    opt.Authority = "http://localhost:5000";
-                    opt.RequireHttpsMetadata = false;
-                    opt.ApiName = "invoices";
-                });
+           
 
             services.AddSwaggerGen(c =>
             {
@@ -132,7 +160,7 @@ namespace PayDel.Presentation
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ISeedService seed)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SeedService seed)
         {
             if (env.IsDevelopment())
             {
