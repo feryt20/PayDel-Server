@@ -1,0 +1,17 @@
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\bin\Debug\netcoreapp3.1\IdentityTestConsole.exe
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.csprojAssemblyReference.cache
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.AssemblyInfoInputs.cache
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.AssemblyInfo.cs
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\bin\Debug\netcoreapp3.1\IdentityTestConsole.deps.json
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\bin\Debug\netcoreapp3.1\IdentityTestConsole.runtimeconfig.json
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\bin\Debug\netcoreapp3.1\IdentityTestConsole.runtimeconfig.dev.json
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\bin\Debug\netcoreapp3.1\IdentityTestConsole.dll
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\bin\Debug\netcoreapp3.1\IdentityTestConsole.pdb
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\bin\Debug\netcoreapp3.1\IdentityModel.dll
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.csproj.CopyComplete
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.dll
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.pdb
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.genruntimeconfig.cache
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\bin\Debug\netcoreapp3.1\RestSharp.dll
+E:\Projects\visual studio 2019\PayDel\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.csproj.CoreCompileInputs.cache

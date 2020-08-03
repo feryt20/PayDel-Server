@@ -166,3 +166,6 @@ E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.cspr
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.pdb
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.genruntimeconfig.cache
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\IdentityModel.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\IdentityModel.AspNetCore.OAuth2Introspection.dll
+E:\Projects\visual studio 2019\PayDel\XUTest\bin\Debug\netcoreapp3.1\IdentityServer4.AccessTokenValidation.dll
