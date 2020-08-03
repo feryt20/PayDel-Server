@@ -22,6 +22,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PayDel.Common.Helpers;
+using PayDel.Common.Interface;
 using PayDel.Data.DatabaseContext;
 using PayDel.Data.Models;
 using PayDel.Presentation.Helpers;
@@ -124,6 +125,7 @@ namespace PayDel.Presentation
             services.AddScoped<IUnitOfWork<PayDelDbContext>, UnitOfWork<PayDelDbContext>>(); //normal between Singleton and Transiant
             services.AddScoped<IAuthService, AuthService>(); //normal between Singleton and Transiant
 
+            services.AddScoped<IUtilities, Utilities>();
             services.AddScoped<UserCheckIdFilter>();
 
            

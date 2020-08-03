@@ -5,12 +5,17 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using PayDel.Common.ErrorsAndMessages;
+using PayDel.Common.Interface;
 using PayDel.Data.DatabaseContext;
 using PayDel.Data.Dtos.Site.Admin;
 using PayDel.Data.Models;
@@ -19,8 +24,7 @@ using PayDel.Services.Site.Admin.Auth.Interface;
 
 namespace PayDel.Presentation.Controllers.Site.V1.Admin
 {
-    
-    [AllowAnonymous]
+
     [Route("v1/site/admin/[controller]")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "v1")]
@@ -28,30 +32,41 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
     {
         private readonly IUnitOfWork<PayDelDbContext> _db;
         private readonly IAuthService _authService;
-        private readonly IConfiguration _config;
-        public AuthController(IUnitOfWork<PayDelDbContext> dbContext, IAuthService authService, IConfiguration config)
+        private readonly IMapper _mapper;
+        private readonly ILogger<AuthController> _logger;
+        private readonly IUtilities _utilities;
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
+        public AuthController(IUnitOfWork<PayDelDbContext> dbContext, IAuthService authService, 
+            IMapper mapper, ILogger<AuthController> logger, IUtilities utilities,
+            UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _db = dbContext;
             _authService = authService;
-            _config = config;
+            _logger = logger;
+            _mapper = mapper;
+            _utilities = utilities;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
+        [AllowAnonymous]
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
         {
             userForRegisterDto.UserName = userForRegisterDto.UserName.ToLower();
-            if(await _db._UserRepository.UserExistsAsync(userForRegisterDto.UserName))
+            if (await _db._UserRepository.UserExistsAsync(userForRegisterDto.UserName))
             {
-                
-                    return BadRequest(new ReturnMessage()
-                    {
-                        status=false,
-                        title="خطا",
-                        message="نام کاربری قبلا ثبت شده",
-                        code="400"
-                    });
+
+                return BadRequest(new ReturnMessage()
+                {
+                    status = false,
+                    title = "خطا",
+                    message = "نام کاربری قبلا ثبت شده",
+                    code = "400"
+                });
             }
-                
+
 
             var userToCreate = new User
             {
@@ -67,44 +82,35 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
             return StatusCode(201);
         }
 
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
-            //throw new Exception("nnnnnnnn");
-            var userFromRepo = await _authService.Login(userForLoginDto.UserName, userForLoginDto.Password);
+            var user = await _userManager.FindByNameAsync(userForLoginDto.UserName);
+            if (user == null)
+            {
+                _logger.LogWarning($"{userForLoginDto.UserName} درخواست لاگین ناموفق داشته است");
+                return Unauthorized("کاربری با این یوزر و پس وجود ندارد");
+            }
+            var result = await _signInManager.CheckPasswordSignInAsync(user, userForLoginDto.Password, false);
+            if (result.Succeeded)
+            {
+                var appUser = _userManager.Users.Include(p => p.Photos)
+                       .FirstOrDefault(u => u.NormalizedUserName == userForLoginDto.UserName.ToUpper());
 
-            if (userFromRepo == null)
-                return Unauthorized(new ReturnMessage()
+                var userForReturn = _mapper.Map<UserForLoginDto>(appUser);
+                _logger.LogInformation($"{userForLoginDto.UserName} لاگین کرده است");
+                return Ok(new
                 {
-                    status = false,
-                    title = "خطا",
-                    message = "نام کاربری یا کلمه عبور اشتباه است"
+                    token = _utilities.GenerateJwtToken(appUser, userForLoginDto.IsRemember),
+                    user = userForReturn
                 });
-
-            var claims = new[]
+            }
+            else
             {
-                new Claim(ClaimTypes.NameIdentifier,userFromRepo.Id.ToString()),
-                new Claim(ClaimTypes.Name,userFromRepo.UserName.ToString())
-            };
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-
-            var tokenDes = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(claims),
-                Expires = userForLoginDto.IsRemember ? DateTime.Now.AddDays(2) : DateTime.Now.AddHours(2),
-                SigningCredentials = creds
-            };
-
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var token = tokenHandler.CreateToken(tokenDes);
-
-
-            return Ok(new
-            {
-                token=tokenHandler.WriteToken(token)
-            });
+                _logger.LogWarning($"{userForLoginDto.UserName} درخواست لاگین ناموفق داشته است");
+                return Unauthorized("کاربری با این یوزر و پس وجود ندارد");
+            }
         }
 
 

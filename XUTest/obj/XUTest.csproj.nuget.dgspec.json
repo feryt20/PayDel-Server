@@ -50,9 +50,17 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.6.0, )"
+            },
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[4.9.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.6.0, )"
             },
             "ZNetCS.AspNetCore.Logging.EntityFrameworkCore": {
               "target": "Package",

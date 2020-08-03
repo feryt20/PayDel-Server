@@ -1,28 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Text;
+using PayDel.Common.Interface;
+using PayDel.Data.Models;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace PayDel.Common.Helpers
 {
-    public static class Utilities
+    public class Utilities : IUtilities
     {
-        public static void CreatePasswordHash(string password,out byte[] PasswordHash,out byte[] passwordSalt)
+        private readonly IConfiguration _config;
+        public Utilities(IConfiguration config)
         {
-            using (var hmac = new System.Security.Cryptography.HMACSHA512())
+            _config = config;
+        }
+
+        public string GenerateJwtToken(User user, bool isRemember)
+        {
+            var claims = new[]
             {
-                passwordSalt = hmac.Key;
-                PasswordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+                new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
+                new Claim(ClaimTypes.Name,user.UserName)
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
+
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+
+            var tokenDes = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = isRemember ? DateTime.Now.AddDays(1) : DateTime.Now.AddHours(2),
+                SigningCredentials = creds
+            };
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            var token = tokenHandler.CreateToken(tokenDes);
+
+            return tokenHandler.WriteToken(token);
+        }
+        public void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+        {
+            using (var hamc = new System.Security.Cryptography.HMACSHA512())
+            {
+                passwordSalt = hamc.Key;
+                passwordHash = hamc.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
             }
         }
-        public static bool VerifyPasswordHash(string password, byte[] PasswordHash, byte[] passwordSalt)
+        public bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
         {
-            using (var hmac = new System.Security.Cryptography.HMACSHA512(passwordSalt))
+            using (var hamc = new System.Security.Cryptography.HMACSHA512(passwordSalt))
             {
-                var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-
-                for (int i = 0; i < computedHash.Length; i++)
+                var cumputedHash = hamc.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+                for (int i = 0; i < cumputedHash.Length; i++)
                 {
-                    if (computedHash[i] != PasswordHash[i])
+                    if (cumputedHash[i] != passwordHash[i])
                         return false;
                 }
             }

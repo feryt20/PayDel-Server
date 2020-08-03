@@ -3217,8 +3217,10 @@
         "dependencies": {
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.IdentityModel.Tokens": "6.6.0",
           "NLog.Web.AspNetCore": "4.9.2",
           "PayDel.Data": "1.0.0",
+          "System.IdentityModel.Tokens.Jwt": "6.6.0",
           "ZNetCS.AspNetCore.Logging.EntityFrameworkCore": "2.1.1"
         },
         "compile": {
