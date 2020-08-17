@@ -7,9 +7,10 @@ namespace PayDel.Data.Models
 {
     public class Role : IdentityRole
     {
-        
 
-        public ICollection<UserRole> UserRoles { get; set; }
+        public Role() : base() { }
+        public Role(string name) : base(name) { }
+       // public ICollection<UserRole> UserRoles { get; set; }
     }
 
 }

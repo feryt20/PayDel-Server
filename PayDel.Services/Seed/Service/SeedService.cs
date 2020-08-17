@@ -17,12 +17,13 @@ namespace PayDel.Services.Seed.Service
     {
         //private readonly IUnitOfWork<PayDelDbContext> _db;
         private readonly UserManager<User> _userManager;
-
+        private readonly RoleManager<Role> _roleManager;
         //public SeedService(IUnitOfWork<PayDelDbContext> dbContext)
-        public SeedService(UserManager<User> userManager)
+        public SeedService(UserManager<User> userManager, RoleManager<Role> roleManager)
         {
             //_db = dbContext;
             _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         //public void SeedUsers()
@@ -54,38 +55,31 @@ namespace PayDel.Services.Seed.Service
             {
                 var userData = System.IO.File.ReadAllText("Files/Json/UserSeedData.json");
                 var users = JsonConvert.DeserializeObject<IList<User>>(userData);
+
+                var roles = new List<Role>
+                {
+                    new Role {Name = "Admin"},
+                    new Role {Name = "User"},
+                    new Role {Name = "Vip"},
+                    new Role {Name = "Operator"}
+                };
+
+                foreach (var role in roles)
+                {
+                    _roleManager.CreateAsync(role).Wait();
+                }
+
                 foreach (var user in users)
                 {
                     user.Email = user.Email.ToLower();
                     user.UserName = user.UserName.ToLower();
-                    user.NormalizedEmail = user.Email.ToUpper();
-                    user.NormalizedUserName = user.UserName.ToUpper();
+                    //user.NormalizedEmail = user.Email.ToUpper();
+                    //user.NormalizedUserName = user.UserName.ToUpper();
                     _userManager.CreateAsync(user, "MyP@ssword!").Wait();
+                    _userManager.AddToRoleAsync(user, "Admin").Wait();
                 }
             }
         }
 
-        public async Task SeedUsersAsync()
-        {
-            if (!_userManager.Users.Any())
-            {
-                var userData = await System.IO.File.ReadAllTextAsync("Files/Json/UserSeedData.json");
-                var users = JsonConvert.DeserializeObject<IList<User>>(userData);
-                foreach (var user in users)
-                {
-                    user.Email = user.Email.ToLower();
-                    user.UserName = user.UserName.ToLower();
-                    user.NormalizedEmail = user.Email.ToUpper();
-                    user.NormalizedUserName = user.UserName.ToUpper();
-                    //await _userManager.CreateAsync(user, "MyP@ssword!");
-
-                    IdentityResult result = await _userManager.CreateAsync(user, "MyP@ssword!");
-                    if (result.Succeeded)
-                    {
-
-                    }
-                }
-            }
-        }
     }
 }

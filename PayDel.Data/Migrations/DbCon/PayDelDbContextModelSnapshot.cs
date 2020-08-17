@@ -335,19 +335,9 @@ namespace PayDel.Data.Migrations.DbCon
                     b.Property<string>("RoleId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("RoleId1")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("UserId1")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("UserId", "RoleId");
 
                     b.HasIndex("RoleId");
-
-                    b.HasIndex("RoleId1");
-
-                    b.HasIndex("UserId1");
 
                     b.ToTable("AspNetUserRoles");
                 });
@@ -414,19 +404,11 @@ namespace PayDel.Data.Migrations.DbCon
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PayDel.Data.Models.Role", "Role")
-                        .WithMany("UserRoles")
-                        .HasForeignKey("RoleId1");
-
                     b.HasOne("PayDel.Data.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("PayDel.Data.Models.User", "User")
-                        .WithMany("UserRoles")
-                        .HasForeignKey("UserId1");
                 });
 #pragma warning restore 612, 618
         }

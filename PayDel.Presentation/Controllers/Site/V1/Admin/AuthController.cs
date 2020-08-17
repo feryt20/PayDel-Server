@@ -103,7 +103,7 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
                 _logger.LogInformation($"{userForLoginDto.UserName} لاگین کرده است");
                 return Ok(new
                 {
-                    token = _utilities.GenerateJwtToken(appUser, userForLoginDto.IsRemember),
+                    token = await _utilities.GenerateJwtTokenAsync(appUser, userForLoginDto.IsRemember),
                     user = userForReturn
                 });
             }
@@ -115,11 +115,14 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
         }
 
 
+        [Authorize(Roles ="Admin")]
         [HttpGet("getval")]
-        public async Task<ActionResult<IEnumerable<string>>> Get()
+        public async Task<IActionResult> GetUsers()
         {
-            var u = await _db._UserRepository.GetAllAsync();
-            return Ok(u);
+            var users = await _db._UserRepository.GetAllAsync(null, null, "Photos,BankCards");
+
+            var userProfile = _mapper.Map<IEnumerable<UserProfileDto>>(users);
+            return Ok(userProfile);
         }
 
     }

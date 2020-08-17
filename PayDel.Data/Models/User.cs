@@ -42,6 +42,6 @@ namespace PayDel.Data.Models
         public ICollection<BankCard> BankCards { get; set; }
         //public string Created { get; set; }
         //public string Created { get; set; }
-        public ICollection<UserRole> UserRoles { get; set; }
+        //public ICollection<UserRole> UserRoles { get; set; }
     }
 }
