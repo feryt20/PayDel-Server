@@ -98,6 +98,19 @@ namespace PayDel.Presentation
                    };
                });
 
+            services.AddAuthorization(opt =>
+            {
+                opt.AddPolicy("RequiredAdminRole",policy => policy.RequireRole("Admin"));
+
+                opt.AddPolicy("AcceccVip", policy => policy.RequireRole("Admin", "Vip"));
+                opt.AddPolicy("AcceccOperator", policy => policy.RequireRole("Admin", "Operator"));
+               
+                opt.AddPolicy("RequiredVipRole",policy => policy.RequireRole("Vip"));
+                opt.AddPolicy("RequiredOperatorRole", policy => policy.RequireRole("Operator"));
+
+                opt.AddPolicy("RequiredUserRole", policy => policy.RequireRole("User"));
+            });
+
             //services.AddAuthentication("Bearer")
             //    .AddIdentityServerAuthentication(opt =>
             //    {

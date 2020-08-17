@@ -73,10 +73,9 @@ namespace PayDel.Services.Seed.Service
                 {
                     user.Email = user.Email.ToLower();
                     user.UserName = user.UserName.ToLower();
-                    //user.NormalizedEmail = user.Email.ToUpper();
-                    //user.NormalizedUserName = user.UserName.ToUpper();
                     _userManager.CreateAsync(user, "MyP@ssword!").Wait();
-                    _userManager.AddToRoleAsync(user, "Admin").Wait();
+                    //_userManager.AddToRoleAsync(user, "Admin").Wait();
+                    _userManager.AddToRolesAsync(user, new[] { "Admin" , "User" , "Vip" , "Operator" }).Wait();
                 }
             }
         }

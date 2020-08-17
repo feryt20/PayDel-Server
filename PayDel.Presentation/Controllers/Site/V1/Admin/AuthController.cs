@@ -115,7 +115,8 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
         }
 
 
-        [Authorize(Roles ="Admin")]
+        //[Authorize(Roles ="Admin")]
+        [Authorize(Policy = "RequiredAdminRole")]
         [HttpGet("getval")]
         public async Task<IActionResult> GetUsers()
         {
