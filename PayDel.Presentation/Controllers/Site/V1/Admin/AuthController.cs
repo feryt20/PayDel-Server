@@ -54,20 +54,6 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
         {
-            userForRegisterDto.UserName = userForRegisterDto.UserName.ToLower();
-            if (await _db._UserRepository.UserExistsAsync(userForRegisterDto.UserName))
-            {
-
-                return BadRequest(new ReturnMessage()
-                {
-                    status = false,
-                    title = "خطا",
-                    message = "نام کاربری قبلا ثبت شده",
-                    code = "400"
-                });
-            }
-
-
             var userToCreate = new User
             {
                 Name = userForRegisterDto.Name,
@@ -78,8 +64,23 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
                 Confirmed = true,
             };
 
-            var createdUser = await _authService.Register(userToCreate, userForRegisterDto.Password);
-            return StatusCode(201);
+            var result = await _userManager.CreateAsync(userToCreate, userForRegisterDto.Password);
+
+            if (result.Succeeded)
+            {
+                return Ok(new
+                {
+                    user = userForRegisterDto
+                });
+            }
+
+            return BadRequest(new ReturnMessage()
+            {
+                status = false,
+                title = "خطا",
+                message = "نام کاربری قبلا ثبت شده",
+                code = "400"
+            });
         }
 
         [AllowAnonymous]
