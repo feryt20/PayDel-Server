@@ -30,3 +30,67 @@ E:\Projects\visual studio 2019\PayDel\PayDel.IdServer\obj\Debug\netcoreapp3.1\st
 E:\Projects\visual studio 2019\PayDel\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.dll
 E:\Projects\visual studio 2019\PayDel\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.pdb
 E:\Projects\visual studio 2019\PayDel\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.genruntimeconfig.cache
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.exe
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.deps.json
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.runtimeconfig.json
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.runtimeconfig.dev.json
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.pdb
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\IdentityModel.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\IdentityServer4.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\IdentityServer4.Storage.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.csprojAssemblyReference.cache
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.AssemblyInfoInputs.cache
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.AssemblyInfo.cs
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.csproj.CoreCompileInputs.cache
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.RazorTargetAssemblyInfo.cache
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.csproj.CopyComplete
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\staticwebassets\PayDel.IdServer.StaticWebAssets.Manifest.cache
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\staticwebassets\PayDel.IdServer.StaticWebAssets.xml
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.dll
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.pdb
+C:\Users\Farshad\source\repos\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.genruntimeconfig.cache
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\appsettings.json
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.exe
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.deps.json
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.runtimeconfig.json
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.runtimeconfig.dev.json
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\PayDel.IdServer.pdb
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\IdentityModel.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\IdentityServer4.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\IdentityServer4.Storage.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.csprojAssemblyReference.cache
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.AssemblyInfoInputs.cache
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.AssemblyInfo.cs
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.csproj.CoreCompileInputs.cache
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.MvcApplicationPartsAssemblyInfo.cache
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.RazorTargetAssemblyInfo.cache
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.csproj.CopyComplete
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\staticwebassets\PayDel.IdServer.StaticWebAssets.Manifest.cache
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\staticwebassets\PayDel.IdServer.StaticWebAssets.xml
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.pdb
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.genruntimeconfig.cache

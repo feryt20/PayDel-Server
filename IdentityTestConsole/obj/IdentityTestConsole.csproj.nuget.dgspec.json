@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\visual studio 2019\\PayDel\\IdentityTestConsole\\IdentityTestConsole.csproj": {}
+    "E:\\Projects\\visual studio 2019\\PayDel-Server\\IdentityTestConsole\\IdentityTestConsole.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\visual studio 2019\\PayDel\\IdentityTestConsole\\IdentityTestConsole.csproj": {
+    "E:\\Projects\\visual studio 2019\\PayDel-Server\\IdentityTestConsole\\IdentityTestConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\visual studio 2019\\PayDel\\IdentityTestConsole\\IdentityTestConsole.csproj",
+        "projectUniqueName": "E:\\Projects\\visual studio 2019\\PayDel-Server\\IdentityTestConsole\\IdentityTestConsole.csproj",
         "projectName": "IdentityTestConsole",
-        "projectPath": "E:\\Projects\\visual studio 2019\\PayDel\\IdentityTestConsole\\IdentityTestConsole.csproj",
+        "projectPath": "E:\\Projects\\visual studio 2019\\PayDel-Server\\IdentityTestConsole\\IdentityTestConsole.csproj",
         "packagesPath": "C:\\Users\\Farshad\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\visual studio 2019\\PayDel\\IdentityTestConsole\\obj\\",
+        "outputPath": "E:\\Projects\\visual studio 2019\\PayDel-Server\\IdentityTestConsole\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Farshad\\AppData\\Roaming\\NuGet\\NuGet.Config",

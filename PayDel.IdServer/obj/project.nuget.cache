@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tJxd1R0/mRLJrTSIG1t4wvCq2zS9ZFtpr6oWdHFEag8KAboporIXC4kRVdTXCxUw3SIy9sEFBmHWV5DJXo5u/Q==",
+  "dgSpecHash": "f9ViTsuKS2CXcPB6B4fEE7Wm3S1ah53UtQ+t0HLf7AFWQRefQAp2EqrMmZ9mlrNzkXTrmz7u2GQoviqyysWlpw==",
   "success": true,
-  "projectFilePath": "E:\\Projects\\visual studio 2019\\PayDel\\PayDel.IdServer\\PayDel.IdServer.csproj",
+  "projectFilePath": "E:\\Projects\\visual studio 2019\\PayDel-Server\\PayDel.IdServer\\PayDel.IdServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Farshad\\.nuget\\packages\\identitymodel\\4.3.0\\identitymodel.4.3.0.nupkg.sha512",
     "C:\\Users\\Farshad\\.nuget\\packages\\identityserver4\\4.0.4\\identityserver4.4.0.4.nupkg.sha512",

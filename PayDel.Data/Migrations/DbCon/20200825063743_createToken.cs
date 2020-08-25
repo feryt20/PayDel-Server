@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PayDel.Data.Migrations.DbCon
 {
-    public partial class initial : Migration
+    public partial class createToken : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -189,6 +189,31 @@ namespace PayDel.Data.Migrations.DbCon
                 });
 
             migrationBuilder.CreateTable(
+                name: "MyTokens",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    DateCreated = table.Column<DateTime>(nullable: false),
+                    DateModified = table.Column<DateTime>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false),
+                    ClientId = table.Column<string>(nullable: false),
+                    Ip = table.Column<string>(nullable: false),
+                    Value = table.Column<string>(nullable: false),
+                    ExpireTime = table.Column<DateTime>(nullable: false),
+                    UserId = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MyTokens", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_MyTokens_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Photos",
                 columns: table => new
                 {
@@ -258,6 +283,11 @@ namespace PayDel.Data.Migrations.DbCon
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_MyTokens_UserId",
+                table: "MyTokens",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Photos_UserId",
                 table: "Photos",
                 column: "UserId");
@@ -282,6 +312,9 @@ namespace PayDel.Data.Migrations.DbCon
 
             migrationBuilder.DropTable(
                 name: "BankCards");
+
+            migrationBuilder.DropTable(
+                name: "MyTokens");
 
             migrationBuilder.DropTable(
                 name: "Photos");

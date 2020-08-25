@@ -27,7 +27,7 @@ namespace PayDel.Data.DatabaseContext
 
         public DbSet<Photo> Photos { get; set; }
         public DbSet<BankCard> BankCards { get; set; }
-
-
+        public DbSet<MyToken> MyTokens { get; set; }
+        
     }
 }

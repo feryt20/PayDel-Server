@@ -10,8 +10,8 @@ using PayDel.Data.DatabaseContext;
 namespace PayDel.Data.Migrations.DbCon
 {
     [DbContext(typeof(PayDelDbContext))]
-    [Migration("20200817081354_initial")]
-    partial class initial
+    [Migration("20200825063743_createToken")]
+    partial class createToken
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -158,6 +158,46 @@ namespace PayDel.Data.Migrations.DbCon
                     b.HasIndex("UserId");
 
                     b.ToTable("BankCards");
+                });
+
+            modelBuilder.Entity("PayDel.Data.Models.MyToken", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ClientId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ExpireTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Ip")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("MyTokens");
                 });
 
             modelBuilder.Entity("PayDel.Data.Models.Photo", b =>
@@ -384,6 +424,15 @@ namespace PayDel.Data.Migrations.DbCon
                 {
                     b.HasOne("PayDel.Data.Models.User", "User")
                         .WithMany("BankCards")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PayDel.Data.Models.MyToken", b =>
+                {
+                    b.HasOne("PayDel.Data.Models.User", "User")
+                        .WithMany("MyTokens")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

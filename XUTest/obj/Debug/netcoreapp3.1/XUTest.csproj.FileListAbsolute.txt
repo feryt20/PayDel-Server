@@ -174,3 +174,355 @@ E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.cspr
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.dll
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.pdb
 E:\Projects\visual studio 2019\PayDel\XUTest\obj\Debug\netcoreapp3.1\XUTest.genruntimeconfig.cache
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\nlog.config
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Presentation.exe
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.deps.json
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.runtimeconfig.json
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.runtimeconfig.dev.json
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.pdb
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\FluentAssertions.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\IdentityModel.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\IdentityModel.AspNetCore.OAuth2Introspection.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\IdentityServer4.AccessTokenValidation.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.TestHost.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CommunicationUtilities.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CrossPlatEngine.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\testhost.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Moq.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.abstractions.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.assert.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.core.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.execution.dotnet.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ZNetCS.AspNetCore.Logging.EntityFrameworkCore.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Common.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Data.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Presentation.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Repo.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Services.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Presentation.pdb
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Common.pdb
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Data.pdb
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Repo.pdb
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Services.pdb
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.csprojAssemblyReference.cache
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.AssemblyInfoInputs.cache
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.AssemblyInfo.cs
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.csproj.CoreCompileInputs.cache
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.csproj.CopyComplete
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.dll
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.pdb
+C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.genruntimeconfig.cache
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\nlog.config
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\appsettings.json
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Presentation.exe
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.deps.json
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.runtimeconfig.json
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.runtimeconfig.dev.json
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.pdb
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\AutoMapper.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Castle.Core.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\FluentAssertions.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\IdentityModel.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\IdentityModel.AspNetCore.OAuth2Introspection.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\IdentityServer4.AccessTokenValidation.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.TestHost.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CommunicationUtilities.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CrossPlatEngine.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\testhost.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Moq.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\NLog.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.abstractions.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.assert.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.core.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.execution.dotnet.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ZNetCS.AspNetCore.Logging.EntityFrameworkCore.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Common.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Data.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Presentation.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Repo.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Services.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Presentation.pdb
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Common.pdb
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Data.pdb
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Repo.pdb
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Services.pdb
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.csprojAssemblyReference.cache
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.AssemblyInfoInputs.cache
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.AssemblyInfo.cs
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.csproj.CoreCompileInputs.cache
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.csproj.CopyComplete
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.dll
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.pdb
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.genruntimeconfig.cache

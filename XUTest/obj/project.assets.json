@@ -9960,11 +9960,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\visual studio 2019\\PayDel\\XUTest\\XUTest.csproj",
+      "projectUniqueName": "E:\\Projects\\visual studio 2019\\PayDel-Server\\XUTest\\XUTest.csproj",
       "projectName": "XUTest",
-      "projectPath": "E:\\Projects\\visual studio 2019\\PayDel\\XUTest\\XUTest.csproj",
+      "projectPath": "E:\\Projects\\visual studio 2019\\PayDel-Server\\XUTest\\XUTest.csproj",
       "packagesPath": "C:\\Users\\Farshad\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\visual studio 2019\\PayDel\\XUTest\\obj\\",
+      "outputPath": "E:\\Projects\\visual studio 2019\\PayDel-Server\\XUTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Farshad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9980,8 +9980,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\Projects\\visual studio 2019\\PayDel\\PayDel.Presentation\\PayDel.Presentation.csproj": {
-              "projectPath": "E:\\Projects\\visual studio 2019\\PayDel\\PayDel.Presentation\\PayDel.Presentation.csproj"
+            "E:\\Projects\\visual studio 2019\\PayDel-Server\\PayDel.Presentation\\PayDel.Presentation.csproj": {
+              "projectPath": "E:\\Projects\\visual studio 2019\\PayDel-Server\\PayDel.Presentation\\PayDel.Presentation.csproj"
             }
           }
         }

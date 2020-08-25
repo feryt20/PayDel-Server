@@ -491,11 +491,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\visual studio 2019\\PayDel\\PayDel.IdServer\\PayDel.IdServer.csproj",
+      "projectUniqueName": "E:\\Projects\\visual studio 2019\\PayDel-Server\\PayDel.IdServer\\PayDel.IdServer.csproj",
       "projectName": "PayDel.IdServer",
-      "projectPath": "E:\\Projects\\visual studio 2019\\PayDel\\PayDel.IdServer\\PayDel.IdServer.csproj",
+      "projectPath": "E:\\Projects\\visual studio 2019\\PayDel-Server\\PayDel.IdServer\\PayDel.IdServer.csproj",
       "packagesPath": "C:\\Users\\Farshad\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\visual studio 2019\\PayDel\\PayDel.IdServer\\obj\\",
+      "outputPath": "E:\\Projects\\visual studio 2019\\PayDel-Server\\PayDel.IdServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Farshad\\AppData\\Roaming\\NuGet\\NuGet.Config",
