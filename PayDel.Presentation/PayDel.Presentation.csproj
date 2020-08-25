@@ -5,17 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\Site\V1\App\**" />
+    <Content Remove="Controllers\Site\V1\App\**" />
+    <EmbeddedResource Remove="Controllers\Site\V1\App\**" />
+    <None Remove="Controllers\Site\V1\App\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Files\Json\UserSeedData.json" />
   </ItemGroup>
 
 
   <ItemGroup>
     <ProjectReference Include="..\PayDel.Services\PayDel.Services.csproj" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="Controllers\Site\V1\App\" />
   </ItemGroup>
 
 
