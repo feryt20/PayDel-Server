@@ -130,7 +130,7 @@ namespace PayDel.Presentation
             services.AddTransient<SeedService>();
             services.AddCors();
 
-            services.Configure<SomeSetting>(Configuration.GetSection("SomeSetting"));
+            services.Configure<TokenSetting>(Configuration.GetSection("MyAppSetting"));
 
 
             //////services.AddTransient();//false to use --> create instance from db for each request 

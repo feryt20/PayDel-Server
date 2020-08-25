@@ -4,6 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Dtos\Api\**" />
+    <Compile Remove="Dtos\Site\App\**" />
+    <EmbeddedResource Remove="Dtos\Api\**" />
+    <EmbeddedResource Remove="Dtos\Site\App\**" />
+    <None Remove="Dtos\Api\**" />
+    <None Remove="Dtos\Site\App\**" />
+  </ItemGroup>
+
   
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
@@ -17,11 +26,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="3.1.6" />
     <PackageReference Include="ZNetCS.AspNetCore.Logging.EntityFrameworkCore" Version="2.1.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Dtos\Api\" />
-    <Folder Include="Dtos\Site\App\" />
   </ItemGroup>
 
 </Project>
