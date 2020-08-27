@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
@@ -8,13 +9,21 @@ namespace PayDel.Data.Dtos.Token
     public class TokenRequestDto
     {
         [Required]
-        public string GrantType { get; set; } //password || refresh_token
-        [Required]
+        [Description("این پارامتر میتواند مقدار password و یا refresh_token را داشته باشد ")]
+        public string GrantType { get; set; } //password || refresh_token || social
+        [Description("...")]
         public string ClientId { get; set; }
         [Required]
-        [EmailAddress(ErrorMessage = "ایمیل وارد شده صحیح نمیباشد")]
+        // [Phone(ErrorMessage = "شماره وارد شده صحیح نمیباشد")]
+        [Description("نام کاربری که ایمیل یا شماره موبایل میباشد")]
         public string UserName { get; set; }
+        [Description("رفرش توکن مورد نیاز برای بارگزاری مجدد توکن")]
         public string RefreshToken { get; set; }
+        [Description("رمز عبور کاربر")]
         public string Password { get; set; }
+        [Description("در صورت true بودن به مدت 20 دقیقه فعال میباشد")]
+        public bool IsRemember { get; set; } = false;
+        [Required]
+        public string Provider { get; set; } = "MADPAY";
     }
 }

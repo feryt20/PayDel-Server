@@ -10,6 +10,7 @@ namespace PayDel.Repo.Infrastructures
     public interface IUnitOfWork<TContext> : IDisposable where TContext:DbContext
     {
         IUserRepository _UserRepository { get; }
+        ITokenRepository _TokenRepository { get; }
         void Save();
         Task<int> SaveAcync();
     }

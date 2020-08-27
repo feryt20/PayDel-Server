@@ -33,7 +33,18 @@ namespace PayDel.Repo.Infrastructures
         }
 
 
-
+        private ITokenRepository tokenRepository;
+        public ITokenRepository _TokenRepository
+        {
+            get
+            {
+                if (tokenRepository == null)
+                {
+                    tokenRepository = new TokenRepository(_db);
+                }
+                return tokenRepository;
+            }
+        }
 
 
         #region methods

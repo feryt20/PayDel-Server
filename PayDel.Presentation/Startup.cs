@@ -86,15 +86,26 @@ namespace PayDel.Presentation
             builder.AddSignInManager<SignInManager<User>>();
             builder.AddDefaultTokenProviders();
 
+            services.Configure<TokenSetting>(Configuration.GetSection("TokenSetting"));
+
+            var tokenSettingSection = Configuration.GetSection("TokenSetting");
+            var tokenSetting = tokenSettingSection.Get<TokenSetting>();
+            var key = Encoding.ASCII.GetBytes(tokenSetting.Secret);
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                .AddJwtBearer(opt =>
                {
                    opt.TokenValidationParameters = new TokenValidationParameters
                    {
                        ValidateIssuerSigningKey = true,
-                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
-                       ValidateIssuer = false,
-                       ValidateAudience = false,
+                       //IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
+                       //ValidateIssuer = false,
+                       //ValidateAudience = false,
+                       IssuerSigningKey = new SymmetricSecurityKey(key),
+                       ValidateIssuer = true,
+                       ValidIssuer = tokenSetting.Site,
+                       ValidateAudience = true,
+                       ValidAudience = tokenSetting.Audience,
+                       ClockSkew = TimeSpan.Zero
                    };
                });
 
@@ -130,7 +141,7 @@ namespace PayDel.Presentation
             services.AddTransient<SeedService>();
             services.AddCors();
 
-            services.Configure<TokenSetting>(Configuration.GetSection("MyAppSetting"));
+            
 
 
             //////services.AddTransient();//false to use --> create instance from db for each request 
@@ -140,8 +151,8 @@ namespace PayDel.Presentation
 
             services.AddScoped<IUtilities, Utilities>();
             services.AddScoped<UserCheckIdFilter>();
+            services.AddScoped<TokenSetting>();
 
-           
 
             services.AddSwaggerGen(c =>
             {

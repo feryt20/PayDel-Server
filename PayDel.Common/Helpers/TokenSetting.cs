@@ -8,9 +8,10 @@ namespace PayDel.Common.Helpers
     {
         public string Site { get; set; }
         public string Secret { get; set; }
-        public string ExpireDate { get; set; }
+        public string ClientId { get; set; }
+        public string ExpireTime { get; set; }
         public string Audience { get; set; }
-        public string SendUser { get; set; }
-        public string SendKey { get; set; }
+        public string SendGridUser { get; set; }
+        public string SendGridKey { get; set; }
     }
 }

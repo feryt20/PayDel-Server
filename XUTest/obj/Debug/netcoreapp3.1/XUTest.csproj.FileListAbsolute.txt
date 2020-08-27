@@ -350,14 +350,18 @@ C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTes
 C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.dll
 C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.pdb
 C:\Users\Farshad\source\repos\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.genruntimeconfig.cache
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.csprojAssemblyReference.cache
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.AssemblyInfoInputs.cache
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.AssemblyInfo.cs
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.csproj.CoreCompileInputs.cache
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\nlog.config
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\appsettings.json
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Presentation.exe
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
-E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Presentation.exe
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.deps.json
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.runtimeconfig.json
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\XUTest.runtimeconfig.dev.json
@@ -518,10 +522,6 @@ E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayD
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Data.pdb
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Repo.pdb
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\bin\Debug\netcoreapp3.1\PayDel.Services.pdb
-E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.csprojAssemblyReference.cache
-E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.AssemblyInfoInputs.cache
-E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.AssemblyInfo.cs
-E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.csproj.CoreCompileInputs.cache
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.csproj.CopyComplete
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.dll
 E:\Projects\visual studio 2019\PayDel-Server\XUTest\obj\Debug\netcoreapp3.1\XUTest.pdb
