@@ -15,11 +15,5 @@ namespace PayDel.Data.Dtos
             get { return pageSize; }
             set { pageSize = (value > 50) ? 50 : value; }
         }
-        public string Filter { get; set; }
-
-        //SortHeader
-        public string SortHe { get; set; }
-        //SortDirection
-        public string SortDir { get; set; }
     }
 }

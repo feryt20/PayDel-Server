@@ -185,44 +185,27 @@ namespace PayDel.Repo.Infrastructures
         }
         #endregion dispose
 
-        public PagedList<TEntity> GetAllPagedList(PaginationDto paginationDto, Expression<Func<TEntity, bool>> filter, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy, string includeEntity)
+        public PagedList<TEntity> GetAllPagedList(PaginationDto paginationDto)
         {
             IQueryable<TEntity> query = _dbSet.AsNoTracking();
             //filter
-            if (filter != null)
-                query = query.Where(filter);
-
+           
             //include
-            foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-            {
-                query = query.Include(includeentity);
-            }
+                
             //orderby
-            if (orderBy != null)
-            {
-                query = orderBy(query);
-            }
+            
             return PagedList<TEntity>.Create(query, paginationDto.PageNumber, paginationDto.PageSize);
         }
 
-        public async Task<PagedList<TEntity>> GetAllPagedListAsync(PaginationDto paginationDto, Expression<Func<TEntity, bool>> filter, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy, string includeEntity)
+        public async Task<PagedList<TEntity>> GetAllPagedListAsync(PaginationDto paginationDto)
         {
             IQueryable<TEntity> query = _dbSet.AsNoTracking();
             //filter
-            if (filter != null)
-                query = query.Where(filter);
 
             //include
-            foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-            {
-                query = query.Include(includeentity);
-            }
+
             //orderby
-            if (orderBy != null)
-            {
-                query = orderBy(query);
-            }
-            //
+
             return await PagedList<TEntity>.CreateAsync(query,
                 paginationDto.PageNumber, paginationDto.PageSize);
         }

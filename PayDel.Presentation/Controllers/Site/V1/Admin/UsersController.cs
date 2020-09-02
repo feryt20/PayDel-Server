@@ -10,7 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using PayDel.Common.ErrorsAndMessages;
+using PayDel.Common.Helpers;
 using PayDel.Data.DatabaseContext;
+using PayDel.Data.Dtos;
 using PayDel.Data.Dtos.Site.Admin;
 using PayDel.Presentation.Helpers;
 using PayDel.Repo.Infrastructures;
@@ -45,6 +47,21 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
 
             var userProfile = _mapper.Map<IEnumerable<UserProfileDto>>(users);
             return Ok(userProfile);
+        }
+
+        [AllowAnonymous]
+        [HttpGet("my")]
+        public async Task<IActionResult> GetBlogs([FromQuery] PaginationDto paginationDto)
+        {
+            var blogsFromRepo = await _db._UserRepository
+                .GetAllPagedListAsync(
+                paginationDto);
+
+            Response.AddPagination(blogsFromRepo.CurrentPage, blogsFromRepo.PageSize,
+                blogsFromRepo.TotalCount, blogsFromRepo.TotalPage);
+            //MostViewed
+            return Ok(blogsFromRepo);
+
         }
 
         [HttpGet("{id}")]
