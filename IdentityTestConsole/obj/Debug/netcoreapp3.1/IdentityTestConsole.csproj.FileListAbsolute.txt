@@ -48,3 +48,4 @@ E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\obj\Debug\netco
 E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.dll
 E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.pdb
 E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.genruntimeconfig.cache
+E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.csprojAssemblyReference.cache

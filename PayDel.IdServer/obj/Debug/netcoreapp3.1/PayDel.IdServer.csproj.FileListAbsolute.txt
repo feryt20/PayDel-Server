@@ -93,3 +93,4 @@ E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreap
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.dll
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.pdb
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.genruntimeconfig.cache
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.csprojAssemblyReference.cache

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PayDel.Common.Helpers;
+using PayDel.Data.Dtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -22,6 +24,11 @@ namespace PayDel.Repo.Infrastructures
             Expression<Func<TEntity, bool>> filter,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy,
             string includeEntity);
+        PagedList<TEntity> GetAllPagedList(PaginationDto paginationDto,
+            Expression<Func<TEntity, bool>> filter,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy,
+            string includeEntity);
+
         TEntity Get(Expression<Func<TEntity, bool>> where);
         IEnumerable<TEntity> GetMany(Expression<Func<TEntity, bool>> where);
 
@@ -34,7 +41,21 @@ namespace PayDel.Repo.Infrastructures
             Expression<Func<TEntity, bool>> filter,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy,
             string includeEntity);
+        Task<PagedList<TEntity>> GetAllPagedListAsync(PaginationDto paginationDto,
+           Expression<Func<TEntity, bool>> filter,
+           Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy,
+           string includeEntity);
         Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> where);
         Task<IEnumerable<TEntity>> GetManyAsync(Expression<Func<TEntity, bool>> where);
+        Task<IEnumerable<TEntity>> GetManyAsyncPaging(
+           Expression<Func<TEntity, bool>> filter,
+
+           Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy,
+
+           string includeEntity,
+           int count,
+           int firstCount,
+           int page
+       );
     }
 }

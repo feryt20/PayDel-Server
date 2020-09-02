@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PayDel.Common.Helpers;
+using PayDel.Data.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -182,5 +184,73 @@ namespace PayDel.Repo.Infrastructures
             Dispose(false);
         }
         #endregion dispose
+
+        public PagedList<TEntity> GetAllPagedList(PaginationDto paginationDto, Expression<Func<TEntity, bool>> filter, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy, string includeEntity)
+        {
+            IQueryable<TEntity> query = _dbSet.AsNoTracking();
+            //filter
+            if (filter != null)
+                query = query.Where(filter);
+
+            //include
+            foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeentity);
+            }
+            //orderby
+            if (orderBy != null)
+            {
+                query = orderBy(query);
+            }
+            return PagedList<TEntity>.Create(query, paginationDto.PageNumber, paginationDto.PageSize);
+        }
+
+        public async Task<PagedList<TEntity>> GetAllPagedListAsync(PaginationDto paginationDto, Expression<Func<TEntity, bool>> filter, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy, string includeEntity)
+        {
+            IQueryable<TEntity> query = _dbSet.AsNoTracking();
+            //filter
+            if (filter != null)
+                query = query.Where(filter);
+
+            //include
+            foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeentity);
+            }
+            //orderby
+            if (orderBy != null)
+            {
+                query = orderBy(query);
+            }
+            //
+            return await PagedList<TEntity>.CreateAsync(query,
+                paginationDto.PageNumber, paginationDto.PageSize);
+        }
+
+        public async Task<IEnumerable<TEntity>> GetManyAsyncPaging(Expression<Func<TEntity,
+            bool>> filter, Func<IQueryable<TEntity>,
+            IOrderedQueryable<TEntity>> orderBy,
+            string includeEntity, int count, int firstCount, int page)
+        {
+            IQueryable<TEntity> query = _dbSet.AsNoTracking();
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeentity);
+            }
+
+            if (orderBy != null)
+            {
+                query = orderBy(query);
+            }
+
+            return await query.Skip(firstCount).Skip(count * page).Take(count).ToListAsync();
+        }
+
     }
 }
