@@ -42,6 +42,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "DnsClient": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            },
+            "HtmlSanitizer": {
+              "target": "Package",
+              "version": "[5.0.343, )"
+            },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"

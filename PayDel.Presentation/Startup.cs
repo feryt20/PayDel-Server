@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using DnsClient;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -31,6 +32,9 @@ using PayDel.Services.Seed.Interface;
 using PayDel.Services.Seed.Service;
 using PayDel.Services.Site.Admin.Auth.Interface;
 using PayDel.Services.Site.Admin.Auth.Service;
+using PayDel.Services.Site.Admin.Upload.Interface;
+using PayDel.Services.Site.Admin.Upload.Service;
+using PayDel.Services.Site.Admin.User;
 
 namespace PayDel.Presentation
 {
@@ -52,6 +56,7 @@ namespace PayDel.Presentation
             {
                 opt.EnableEndpointRouting = false;
                 opt.ReturnHttpNotAcceptable = true;
+                //opt.SuppressAsyncSuffixInActionNames = false;
 
                 var policy = new AuthorizationPolicyBuilder()
                 .RequireAuthenticatedUser().Build();
@@ -150,6 +155,9 @@ namespace PayDel.Presentation
             services.AddScoped<IAuthService, AuthService>(); //normal between Singleton and Transiant
 
             services.AddScoped<IUtilities, Utilities>();
+            services.AddScoped<IUploadService, UploadService>();
+            services.AddSingleton<ILookupClient, LookupClient>();
+            services.AddScoped<IWalletService, WalletService>();
             services.AddScoped<UserCheckIdFilter>();
             services.AddScoped<TokenSetting>();
 

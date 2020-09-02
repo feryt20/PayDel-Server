@@ -21,7 +21,7 @@ namespace PayDel.Services.Site.Admin.Auth.Service
             _utilities = utilities;
         }
 
-        public async Task<User> Login(string username, string password)
+        public async Task<PayDel.Data.Models.User> Login(string username, string password)
         {
             var user = await _db._UserRepository.GetUserByUserNameAsync(username);
             if(user == null)
@@ -36,7 +36,7 @@ namespace PayDel.Services.Site.Admin.Auth.Service
             return user;
         }
 
-        public async Task<User> Register(User user, string password)
+        public async Task<PayDel.Data.Models.User> Register(PayDel.Data.Models.User user, string password)
         {
             byte[] passwordHash, passwordSalt;
 

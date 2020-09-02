@@ -28,6 +28,10 @@ namespace PayDel.Data.DatabaseContext
         public DbSet<Photo> Photos { get; set; }
         public DbSet<BankCard> BankCards { get; set; }
         public DbSet<MyToken> MyTokens { get; set; }
-        
+
+        public DbSet<Wallet> Wallets { get; set; }
+        public DbSet<Gate> Gates { get; set; }
+        public DbSet<EasyPay> EasyPays { get; set; }
+        //public DbSet<VerificationCode> VerificationCodes { get; set; }
     }
 }

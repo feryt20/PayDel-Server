@@ -82,7 +82,6 @@ E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreap
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.csprojAssemblyReference.cache
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.AssemblyInfoInputs.cache
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.AssemblyInfo.cs
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.IdServer\obj\Debug\netcoreapp3.1\PayDel.IdServer.csproj.CoreCompileInputs.cache

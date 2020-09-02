@@ -158,6 +158,179 @@ namespace PayDel.Data.Migrations.DbCon
                     b.ToTable("BankCards");
                 });
 
+            modelBuilder.Entity("PayDel.Data.Models.EasyPay", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("CountLimit")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsCountLimit")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsCoupon")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsUserEmail")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsUserEmailRequired")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsUserName")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsUserNameRequired")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsUserPhone")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsUserPhoneRequired")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsUserText")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsUserTextRequired")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsWallet")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int")
+                        .HasMaxLength(15);
+
+                    b.Property<string>("ReturnFail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReturnSuccess")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("UserEmailExplain")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(25)")
+                        .HasMaxLength(25);
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserNameExplain")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(25)")
+                        .HasMaxLength(25);
+
+                    b.Property<string>("UserPhoneExplain")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(25)")
+                        .HasMaxLength(25);
+
+                    b.Property<string>("UserTextExplain")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(25)")
+                        .HasMaxLength(25);
+
+                    b.Property<string>("WalletGateId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("EasyPays");
+                });
+
+            modelBuilder.Entity("PayDel.Data.Models.Gate", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Grouping")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("IconUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
+
+                    b.Property<string>("Ip")
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDirect")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsIp")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
+
+                    b.Property<string>("WalletId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("WebsiteName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("WebsiteUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("WalletId");
+
+                    b.ToTable("Gates");
+                });
+
             modelBuilder.Entity("PayDel.Data.Models.MyToken", b =>
                 {
                     b.Property<string>("Id")
@@ -382,6 +555,60 @@ namespace PayDel.Data.Migrations.DbCon
                     b.ToTable("AspNetUserRoles");
                 });
 
+            modelBuilder.Entity("PayDel.Data.Models.Wallet", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<long>("Code")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ExitMoney")
+                        .HasColumnType("int");
+
+                    b.Property<int>("InterMoney")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Inventory")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsBlock")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsMain")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsSms")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
+
+                    b.Property<int>("OnExitMoney")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Wallets");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("PayDel.Data.Models.Role", null)
@@ -427,6 +654,24 @@ namespace PayDel.Data.Migrations.DbCon
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("PayDel.Data.Models.EasyPay", b =>
+                {
+                    b.HasOne("PayDel.Data.Models.User", "User")
+                        .WithMany("EasyPays")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PayDel.Data.Models.Gate", b =>
+                {
+                    b.HasOne("PayDel.Data.Models.Wallet", "Wallet")
+                        .WithMany("Gates")
+                        .HasForeignKey("WalletId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("PayDel.Data.Models.MyToken", b =>
                 {
                     b.HasOne("PayDel.Data.Models.User", "User")
@@ -455,6 +700,15 @@ namespace PayDel.Data.Migrations.DbCon
 
                     b.HasOne("PayDel.Data.Models.User", null)
                         .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PayDel.Data.Models.Wallet", b =>
+                {
+                    b.HasOne("PayDel.Data.Models.User", "User")
+                        .WithMany("Wallets")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

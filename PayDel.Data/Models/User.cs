@@ -43,5 +43,7 @@ namespace PayDel.Data.Models
         //public string Created { get; set; }
         //public string Created { get; set; }
         public ICollection<MyToken> MyTokens { get; set; }
+        public ICollection<Wallet> Wallets { get; set; }
+        public ICollection<EasyPay> EasyPays { get; set; }
     }
 }

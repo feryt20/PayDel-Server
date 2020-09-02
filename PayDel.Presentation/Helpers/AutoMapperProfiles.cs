@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using PayDel.Common.Helpers;
 using PayDel.Data.Dtos.Site.Admin;
+using PayDel.Data.Dtos.Site.Users;
 using PayDel.Data.Models;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace PayDel.Presentation.Helpers
     {
         public AutoMapperProfiles()
         {
+            CreateMap<User, UserForDetailedDto>();
             //CreateMap<User, UserProfileDto>();
             CreateMap<User, UserProfileDto>()
                 .ForMember(dest=>dest.ImageUrl, opt=>
@@ -28,6 +30,13 @@ namespace PayDel.Presentation.Helpers
             CreateMap<UserForUpdateDto, User>();
 
             CreateMap<User, UserForLoginDto> ();
+
+            CreateMap<Wallet, WalletForReturnDto>();
+            CreateMap<List<WalletForReturnDto>, List<Wallet>>();
+
+            CreateMap<GateForCreateDto, Gate>();
+            CreateMap<List<GateForReturnDto>, List<Gate>>();
+            CreateMap<Gate, GateForReturnDto>();
         }
     }
 }

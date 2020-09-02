@@ -46,7 +46,31 @@ namespace PayDel.Repo.Infrastructures
             }
         }
 
+        private IGateRepository gateRepository;
+        public IGateRepository _GateRepository
+        {
+            get
+            {
+                if (gateRepository == null)
+                {
+                    gateRepository = new GateRepository(_db);
+                }
+                return gateRepository;
+            }
+        }
 
+        private IWalletRepository walletRepository;
+        public IWalletRepository _WalletRepository
+        {
+            get
+            {
+                if (walletRepository == null)
+                {
+                    walletRepository = new WalletRepository(_db);
+                }
+                return walletRepository;
+            }
+        }
         #region methods
         public void Save()
         {
