@@ -153,6 +153,7 @@ namespace PayDel.Presentation
             //////services.AddSingleton();//single instance of database
             services.AddScoped<IUnitOfWork<PayDelDbContext>, UnitOfWork<PayDelDbContext>>(); //normal between Singleton and Transiant
             services.AddScoped<IAuthService, AuthService>(); //normal between Singleton and Transiant
+            services.AddScoped<IUnitOfWork<FinDbContext>, UnitOfWork<FinDbContext>>();
 
             services.AddScoped<IUtilities, Utilities>();
             services.AddScoped<IUploadService, UploadService>();
