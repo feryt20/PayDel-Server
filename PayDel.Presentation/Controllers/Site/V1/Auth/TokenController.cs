@@ -16,7 +16,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using PayDel.Common.Helpers;
-using PayDel.Common.Interface;
 using PayDel.Data.DatabaseContext;
 using PayDel.Data.Dtos.Site.Admin;
 using PayDel.Data.Dtos.Token;
@@ -24,6 +23,7 @@ using PayDel.Data.Models;
 using PayDel.Repo.Infrastructures;
 using PayDel.Services.Site.Admin.Auth.Interface;
 using PayDel.Services.Site.Admin.Upload.Interface;
+using PayDel.Services.Site.Admin.Util;
 
 namespace PayDel.Presentation.Controllers.Site.V1.Auth
 {
@@ -35,12 +35,12 @@ namespace PayDel.Presentation.Controllers.Site.V1.Auth
         private readonly IUnitOfWork<PayDelDbContext> _db;
         private readonly IMapper _mapper;
         private readonly ILogger<TokenController> _logger;
-        private readonly IUtilities _utilities;
+        private readonly IUtilitiess _utilities;
         private readonly IUploadService _uploadService;
         private readonly IWebHostEnvironment _env;
 
         public TokenController(IUnitOfWork<PayDelDbContext> dbContext,
-             IMapper mapper, ILogger<TokenController> logger, IUtilities utilities, IUploadService uploadService,
+             IMapper mapper, ILogger<TokenController> logger, IUtilitiess utilities, IUploadService uploadService,
             IWebHostEnvironment env
             )
         {

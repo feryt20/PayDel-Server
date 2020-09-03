@@ -8,13 +8,15 @@ using PayDel.Repo.Repositories.Interface;
 
 namespace PayDel.Repo.Infrastructures
 {
-    public class UnitOfWork<TContext> : IUnitOfWork<TContext> where TContext : DbContext, new()
+    //public class UnitOfWork<TContext> : IUnitOfWork<TContext> where TContext : DbContext, new()
+    public class UnitOfWork<TContext> : IUnitOfWork<TContext> where TContext : DbContext
     {
         #region ctr
         protected readonly DbContext _db;
-        public UnitOfWork()
+        public UnitOfWork(TContext context)
         {
-            _db = new TContext();
+            //_db = new TContext();
+            _db = context;
         }
         #endregion
 

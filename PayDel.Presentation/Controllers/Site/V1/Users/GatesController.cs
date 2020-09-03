@@ -9,13 +9,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using PayDel.Common.Interface;
 using PayDel.Data.DatabaseContext;
 using PayDel.Data.Dtos.Site.Users;
 using PayDel.Data.Models;
 using PayDel.Repo.Infrastructures;
 using PayDel.Services.Site.Admin.Upload.Interface;
 using PayDel.Services.Site.Admin.User;
+using PayDel.Services.Site.Admin.Util;
 
 namespace PayDel.Presentation.Controllers.Site.V1.Users
 {
@@ -30,10 +30,10 @@ namespace PayDel.Presentation.Controllers.Site.V1.Users
         private readonly IUploadService _uploadService;
         private readonly IWalletService _walletService;
         private readonly IWebHostEnvironment _env;
-        private readonly IUtilities _utilities;
+        private readonly IUtilitiess _utilities;
         public GatesController(IUnitOfWork<PayDelDbContext> dbContext, IMapper mapper,
             ILogger<GatesController> logger, IUploadService uploadService,
-            IWebHostEnvironment env, IWalletService walletService, IUtilities utilities)
+            IWebHostEnvironment env, IWalletService walletService, IUtilitiess utilities)
         {
             _db = dbContext;
             _mapper = mapper;

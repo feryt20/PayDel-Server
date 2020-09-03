@@ -23,7 +23,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PayDel.Common.Helpers;
-using PayDel.Common.Interface;
 using PayDel.Data.DatabaseContext;
 using PayDel.Data.Models;
 using PayDel.Presentation.Helpers;
@@ -35,6 +34,7 @@ using PayDel.Services.Site.Admin.Auth.Service;
 using PayDel.Services.Site.Admin.Upload.Interface;
 using PayDel.Services.Site.Admin.Upload.Service;
 using PayDel.Services.Site.Admin.User;
+using PayDel.Services.Site.Admin.Util;
 
 namespace PayDel.Presentation
 {
@@ -50,7 +50,9 @@ namespace PayDel.Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<PayDelDbContext>(p=>p.UseSqlServer("Data Source=(local);Initial Catalog=PayDelDb;Integrated Security=true;MultipleActiveResultSets=True;"));
+            services.AddDbContext<PayDelDbContext>();
+            services.AddDbContext<FinDbContext>();
+            services.AddDbContext<LogDbContext>();
 
             services.AddMvc(opt =>
             {
@@ -146,16 +148,20 @@ namespace PayDel.Presentation
             services.AddTransient<SeedService>();
             services.AddCors();
 
-            
+
 
 
             //////services.AddTransient();//false to use --> create instance from db for each request 
             //////services.AddSingleton();//single instance of database
-            services.AddScoped<IUnitOfWork<PayDelDbContext>, UnitOfWork<PayDelDbContext>>(); //normal between Singleton and Transiant
-            services.AddScoped<IAuthService, AuthService>(); //normal between Singleton and Transiant
-            services.AddScoped<IUnitOfWork<FinDbContext>, UnitOfWork<FinDbContext>>();
+            //////services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>)); //normal between Singleton and Transiant
+            //services.AddScoped<IUnitOfWork<PayDelDbContext>, UnitOfWork<PayDelDbContext>>();
+            //services.AddScoped<IUnitOfWork<FinDbContext>, UnitOfWork<FinDbContext>>();
 
-            services.AddScoped<IUtilities, Utilities>();
+            services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+
+            services.AddScoped<IAuthService, AuthService>();
+            //services.AddScoped<IUtilities, Utilities>();
+            services.AddScoped<IUtilitiess, Utilitiess>();
             services.AddScoped<IUploadService, UploadService>();
             services.AddSingleton<ILookupClient, LookupClient>();
             services.AddScoped<IWalletService, WalletService>();

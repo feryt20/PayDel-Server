@@ -1,7 +1,7 @@
 ﻿using PayDel.Common.ErrorsAndMessages;
-using PayDel.Common.Interface;
 using PayDel.Data.DatabaseContext;
 using PayDel.Repo.Infrastructures;
+using PayDel.Services.Site.Admin.Util;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,9 +12,9 @@ namespace PayDel.Services.Site.Admin.User
     public class WalletService : IWalletService
     {
         private readonly IUnitOfWork<PayDelDbContext> _db;
-        private readonly IUtilities _utilities;
+        private readonly IUtilitiess _utilities;
 
-        public WalletService(IUnitOfWork<PayDelDbContext> dbContext, IUtilities utilities)
+        public WalletService(IUnitOfWork<PayDelDbContext> dbContext, IUtilitiess utilities)
         {
             _db = dbContext;
             _utilities = utilities;
