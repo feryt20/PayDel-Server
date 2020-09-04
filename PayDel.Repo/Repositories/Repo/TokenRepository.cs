@@ -14,7 +14,7 @@ namespace PayDel.Repo.Repositories.Repo
         private readonly DbContext _db;
         public TokenRepository(DbContext dbContext) : base(dbContext)
         {
-            _db ??= (PayDelDbContext)_db;
+            _db ??= (PayDelDbContext)dbContext;
         }
     }
 }

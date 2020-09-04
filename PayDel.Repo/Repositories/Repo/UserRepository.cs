@@ -16,7 +16,7 @@ namespace PayDel.Repo.Repositories.Repo
         private readonly DbContext _db;
         public UserRepository(DbContext dbContext) : base(dbContext)
         {
-            _db ??= (PayDelDbContext) _db;
+            _db ??= (PayDelDbContext)dbContext;
         }
 
         public async Task<User> GetUserByUserNameAsync(string username)
