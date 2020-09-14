@@ -17,6 +17,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using PayDel.Common.Helpers;
 using PayDel.Data.DatabaseContext;
+using PayDel.Data.Dtos;
 using PayDel.Data.Dtos.Site.Admin;
 using PayDel.Data.Dtos.Token;
 using PayDel.Data.Models;
@@ -38,7 +39,7 @@ namespace PayDel.Presentation.Controllers.Site.V1.Auth
         private readonly IUtilitiess _utilities;
         private readonly IUploadService _uploadService;
         private readonly IWebHostEnvironment _env;
-
+        private ApiReturn<string> errorModel;
         public TokenController(IUnitOfWork<PayDelDbContext> dbContext,
              IMapper mapper, ILogger<TokenController> logger, IUtilitiess utilities, IUploadService uploadService,
             IWebHostEnvironment env
@@ -54,13 +55,24 @@ namespace PayDel.Presentation.Controllers.Site.V1.Auth
             {
                 env.WebRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
             }
+
+            errorModel = new ApiReturn<string>
+            {
+                Status = false,
+                Message = "",
+                Result = null
+            };
         }
 
 
         [AllowAnonymous]
         [HttpPost("login")]
+        [ProducesResponseType(typeof(ApiReturn<LoginResponseDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiReturn<string>), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Login(TokenRequestDto tokenRequestDto)
         {
+            ApiReturn<LoginResponseDto> model = new ApiReturn<LoginResponseDto> { Status = true };
+
             switch (tokenRequestDto.GrantType)
             {
 
@@ -70,17 +82,21 @@ namespace PayDel.Presentation.Controllers.Site.V1.Auth
                     {
                         var userForReturn = _mapper.Map<UserForDetailedDto>(result.user);
                         //userForReturn.Provider = tokenRequestDto.Provider;
-                        return Ok(new LoginResponseDto
+                        model.Message = "ورود با موفقیت انجام شد";
+                        model.Result = new LoginResponseDto
                         {
                             token = result.token,
                             refresh_token = result.refresh_token,
                             user = userForReturn
-                        });
+                        };
+
+                        return Ok(model);
                     }
                     else
                     {
                         _logger.LogWarning($"{tokenRequestDto.UserName} درخواست لاگین ناموفق داشته است" + "---" + result.message);
-                        return Unauthorized("1x111keyvanx11");
+                        errorModel.Message = "1x111keyvanx11";
+                        return Unauthorized(errorModel);
                     }
                 case "social":
                     var socialresult = await _utilities.GenerateNewTokenAsync(tokenRequestDto, false);
@@ -88,31 +104,44 @@ namespace PayDel.Presentation.Controllers.Site.V1.Auth
                     {
                         //var userForReturn = _mapper.Map<UserForDetailedDto>(socialresult.user);
                         //userForReturn.Provider = tokenRequestDto.Provider;
-                        return Ok(new LoginResponseDto
+                        model.Message = "ورود با رفرش توکن با موفقیت انجام شد";
+                        model.Result = new LoginResponseDto
                         {
                             token = socialresult.token,
-                            refresh_token = socialresult.refresh_token
-                            //user = userForReturn
-                        });
+                            refresh_token = socialresult.refresh_token,
+                            user = _mapper.Map<UserForDetailedDto>(socialresult.user)
+                        };
+                        return Ok(model);
+                       
                     }
                     else
                     {
                         _logger.LogWarning($"{tokenRequestDto.UserName} درخواست لاگین ناموفق داشته است" + "---" + socialresult.message);
-                        return Unauthorized("1x111keyvanx11");
+                        errorModel.Message = "1x111keyvanx11";
+                        return Unauthorized(errorModel);
                     }
                 case "refresh_token":
                     var res = await _utilities.RefreshAccessTokenAsync(tokenRequestDto);
                     if (res.status)
                     {
-                        return Ok(res);
+                        model.Message = "ورود با رفرش توکن با موفقیت انجام شد";
+                        model.Result = new LoginResponseDto
+                        {
+                            token = res.token,
+                            refresh_token = res.refresh_token,
+                            user = _mapper.Map<UserForDetailedDto>(res.user)
+                        };
+                        return Ok(model);
                     }
                     else
                     {
                         _logger.LogWarning($"{tokenRequestDto.UserName} درخواست لاگین ناموفق داشته است" + "---" + res.message);
-                        return Unauthorized("0x000keyvanx00");
+                        errorModel.Message = "0x000keyvanx00";
+                        return Unauthorized(errorModel);
                     }
                 default:
-                    return Unauthorized("خطا در اعتبار سنجی دوباره");
+                    errorModel.Message = "خطا در اعتبار سنجی";
+                    return Unauthorized(errorModel);
             }
         }
 

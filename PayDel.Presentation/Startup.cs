@@ -146,7 +146,8 @@ namespace PayDel.Presentation
             services.AddAutoMapper(typeof(Startup));
             services.AddHttpContextAccessor();
             services.AddTransient<SeedService>();
-            services.AddCors();
+            services.AddCors(opt => opt.AddPolicy("CorsPolicy",builder=>
+            builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader().AllowCredentials()));
 
 
 
@@ -231,7 +232,7 @@ namespace PayDel.Presentation
 
             seed.SeedUsers();
 
-            app.UseCors(p => p.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            app.UseCors("CorsPolicy");
 
             app.UseHttpsRedirection();
 

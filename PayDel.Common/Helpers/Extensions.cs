@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using PayDel.Data.Dtos;
 
 namespace PayDel.Common.Helpers
 {
@@ -11,7 +12,14 @@ namespace PayDel.Common.Helpers
     {
         public static void AddAppError(this HttpResponse httpResponse, string message)
         {
-            httpResponse.Headers.Add("App-Error", message);
+            var apiError = new ApiReturn<string>
+            {
+                Status = false,
+                Message = message,
+                Result = null
+            };
+
+            httpResponse.Headers.Add("App-Error", JsonConvert.SerializeObject(apiError));
             httpResponse.Headers.Add("Access-Control-Expose-Header", "App-Error");
             httpResponse.Headers.Add("Access-Control-Allow-Origin", "*");
         }
