@@ -20,6 +20,7 @@ namespace PayDel.Repo.Infrastructures
             _dbSet = _db.Set<TEntity>();
         }
 
+
         #region normal
         public int Count()
         {
@@ -120,6 +121,12 @@ namespace PayDel.Repo.Infrastructures
         {
             return await _dbSet.FindAsync(id);
         }
+
+        public async Task<TEntity> GetAsNoTrackingByIdAsync(Expression<Func<TEntity, bool>> filter = null)
+        {
+            return await _dbSet.AsNoTracking().FirstOrDefaultAsync(filter);
+        }
+
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await _dbSet.ToListAsync();

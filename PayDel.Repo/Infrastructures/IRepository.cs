@@ -33,6 +33,7 @@ namespace PayDel.Repo.Infrastructures
         Task<int> CountAsync();
         Task InsertAsync(TEntity entity);
         Task<TEntity> GetByIdAsync(object id);
+        Task<TEntity> GetAsNoTrackingByIdAsync(Expression<Func<TEntity, bool>> filter = null);
         Task<IEnumerable<TEntity>> GetAllAsync();
         Task<IEnumerable<TEntity>> GetAllAsync(
             Expression<Func<TEntity, bool>> filter,

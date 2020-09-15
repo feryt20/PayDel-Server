@@ -34,6 +34,7 @@ namespace PayDel.Presentation
 
             services.AddPayDI();
 
+            services.AddPayApiVersioning();
             services.AddPaySwagger();
         }
 
@@ -55,12 +56,19 @@ namespace PayDel.Presentation
 
             //app.UseMvc();
 
-            app.UseEndpoints(end =>
+            //app.UseEndpoints(end =>
+            //{
+            //    end.MapControllers();
+            //    end.MapControllerRoute(
+            //         name: "default",
+            //       pattern: "{controller=home}/{action=index}/{id}");
+            //});
+
+            app.UseEndpoints(endpoints =>
             {
-                end.MapControllers();
-                end.MapControllerRoute(
-                     name: "default",
-                   pattern: "{controller=home}/{action=index}");
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

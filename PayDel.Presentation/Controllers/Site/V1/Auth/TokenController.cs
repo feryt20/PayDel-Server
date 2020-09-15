@@ -28,7 +28,8 @@ using PayDel.Services.Site.Admin.Util;
 
 namespace PayDel.Presentation.Controllers.Site.V1.Auth
 {
-    [Route("v1/site/auth/[controller]")]
+    [ApiVersion("1")]
+    [Route("api/v{v:apiVersion}")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "v1")]
     public class TokenController : ControllerBase

@@ -28,6 +28,9 @@ namespace PayDel.Data.Models
         [Required]
         public string UserId { get; set; }
         public User User { get; set; }
-        
+
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
+
     }
 }

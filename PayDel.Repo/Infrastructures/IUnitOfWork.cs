@@ -13,6 +13,8 @@ namespace PayDel.Repo.Infrastructures
         ITokenRepository _TokenRepository { get; }
         IGateRepository _GateRepository { get; }
         IWalletRepository _WalletRepository { get; }
+
+        IPhotoRepository _PhotoRepository { get; }
         void Save();
         Task<int> SaveAcync();
     }

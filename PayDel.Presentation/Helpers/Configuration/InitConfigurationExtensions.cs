@@ -23,46 +23,46 @@ namespace PayDel.Presentation.Helpers.Configuration
         }
         public static void AddPayInitialize(this IServiceCollection services)
         {
-            //services.AddMvc(opt =>
-            //{
-            //    opt.EnableEndpointRouting = false;
-            //    opt.ReturnHttpNotAcceptable = true;
-            //    //opt.SuppressAsyncSuffixInActionNames = false;
-            //    //opt.SslPort = 4052;
-
-            //    var policy = new AuthorizationPolicyBuilder()
-            //    .RequireAuthenticatedUser().Build();
-            //    opt.Filters.Add(new AuthorizeFilter(policy));
-
-            //    //var jsonFormatter = opt.OutputFormatters.OfType<SystemTextJsonOutputFormatter>().Single();
-            //    //opt.OutputFormatters.Remove(jsonFormatter);
-            //    //opt.OutputFormatters.Add(new IonOutputFormatter(jsonFormatter));
-
-            //    //opt.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
-            //    //opt.InputFormatters.Add(new XmlSerializerInputFormatter(opt));
-            //});
-
-          
-            services.AddMvcCore(config =>
+            services.AddMvc(opt =>
             {
-                config.ReturnHttpNotAcceptable = true;
-                config.Filters.Add(typeof(RequireHttpsAttribute));
+                //opt.EnableEndpointRouting = false;
+                opt.ReturnHttpNotAcceptable = true;
+                //opt.SuppressAsyncSuffixInActionNames = false;
+                //opt.SslPort = 4052;
+
                 var policy = new AuthorizationPolicyBuilder()
-                    .RequireAuthenticatedUser()
-                    .Build();
-                config.Filters.Add(new AuthorizeFilter(policy));
-            })
-            .AddApiExplorer()
-            .AddFormatterMappings()
-            .AddDataAnnotations()
-            .AddCors(opt =>
-            {
-                opt.AddPolicy("CorsPolicy", builder =>
-                 builder.WithOrigins("http://localhost:4200", "https://localhost:44318")
-                         .AllowAnyMethod()
-                         .AllowAnyHeader()
-                         .AllowCredentials());
+                .RequireAuthenticatedUser().Build();
+                opt.Filters.Add(new AuthorizeFilter(policy));
+
+                //var jsonFormatter = opt.OutputFormatters.OfType<SystemTextJsonOutputFormatter>().Single();
+                //opt.OutputFormatters.Remove(jsonFormatter);
+                //opt.OutputFormatters.Add(new IonOutputFormatter(jsonFormatter));
+
+                //opt.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
+                //opt.InputFormatters.Add(new XmlSerializerInputFormatter(opt));
             });
+
+
+            //services.AddMvcCore(config =>
+            //{
+            //    config.ReturnHttpNotAcceptable = true;
+            //    config.Filters.Add(typeof(RequireHttpsAttribute));
+            //    var policy = new AuthorizationPolicyBuilder()
+            //        .RequireAuthenticatedUser()
+            //        .Build();
+            //    config.Filters.Add(new AuthorizeFilter(policy));
+            //})
+            //.AddApiExplorer()
+            //.AddFormatterMappings()
+            //.AddDataAnnotations()
+            //.AddCors(opt =>
+            //{
+            //    opt.AddPolicy("CorsPolicy", builder =>
+            //     builder.WithOrigins("http://localhost:4200", "https://localhost:44318")
+            //             .AllowAnyMethod()
+            //             .AllowAnyHeader()
+            //             .AllowCredentials());
+            //});
 
 
             //services.AddHsts(opt =>

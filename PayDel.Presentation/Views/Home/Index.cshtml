@@ -1,0 +1,81 @@
+﻿@model PayDel.Data.Models.Photo
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h4>Photo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index" enctype="multipart/form-data" method="post">
+            @Html.HiddenFor(m => m.RowVersion)
+            @Html.ValidationSummary(true)
+            @Model.RowVersion[7]
+            <div class="form-group">
+                <label asp-for="Url" class="control-label"></label>
+                @Html.EditorFor(m => m.Url)
+                @Html.ValidationMessageFor(model => model.Url)
+            </div>
+            <div class="form-group">
+                <label asp-for="Alt" class="control-label"></label>
+                @Html.EditorFor(m => m.Alt)
+                <span asp-validation-for="Alt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                @Html.EditorFor(m => m.Description)
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    @Html.EditorFor(m => m.IsMain) @Html.DisplayNameFor(model => model.IsMain)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                @Html.EditorFor(m => m.UserId)
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+            @Html.EditorFor(m => m.RowVersion)
+            <input asp-for="RowVersion" class="form-control" />
+            <span asp-validation-for="RowVersion" class="text-danger"></span>
+        </div>*@
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                @Html.EditorFor(m => m.Id)
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateCreated" class="control-label"></label>
+                @Html.EditorFor(m => m.DateCreated)
+                <span asp-validation-for="DateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateModified" class="control-label"></label>
+                @Html.EditorFor(m => m.DateModified)
+                <span asp-validation-for="DateModified" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    @Html.EditorFor(m => m.IsDeleted)
+                    @Html.DisplayNameFor(model => model.IsDeleted)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

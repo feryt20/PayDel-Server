@@ -73,6 +73,19 @@ namespace PayDel.Repo.Infrastructures
                 return walletRepository;
             }
         }
+
+        private IPhotoRepository photoRepository;
+        public IPhotoRepository _PhotoRepository
+        {
+            get
+            {
+                if (photoRepository == null)
+                {
+                    photoRepository = new PhotoRepository(_db);
+                }
+                return photoRepository;
+            }
+        }
         #region methods
         public void Save()
         {

@@ -396,6 +396,11 @@ namespace PayDel.Data.Migrations.DbCon
                     b.Property<bool>("IsMain")
                         .HasColumnType("bit");
 
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("rowversion");
+
                     b.Property<string>("Url")
                         .IsRequired()
                         .HasColumnType("nvarchar(150)")
