@@ -14,7 +14,6 @@ namespace PayDel.Data.Dtos.Token
         [Description("...")]
         public string ClientId { get; set; }
         [Required]
-        // [Phone(ErrorMessage = "شماره وارد شده صحیح نمیباشد")]
         [Description("نام کاربری که ایمیل یا شماره موبایل میباشد")]
         public string UserName { get; set; }
         [Description("رفرش توکن مورد نیاز برای بارگزاری مجدد توکن")]
@@ -24,6 +23,7 @@ namespace PayDel.Data.Dtos.Token
         [Description("در صورت true بودن به مدت 20 دقیقه فعال میباشد")]
         public bool IsRemember { get; set; } = false;
         [Required]
+        [Description("...")]
         public string Provider { get; set; } = "MADPAY";
     }
 }

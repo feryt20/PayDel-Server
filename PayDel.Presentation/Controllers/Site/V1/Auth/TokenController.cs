@@ -67,8 +67,8 @@ namespace PayDel.Presentation.Controllers.Site.V1.Auth
 
         [AllowAnonymous]
         [HttpPost("login")]
-        [ProducesResponseType(typeof(ApiReturn<LoginResponseDto>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ApiReturn<string>), StatusCodes.Status400BadRequest)]
+        //[ProducesResponseType(typeof(ApiReturn<LoginResponseDto>), StatusCodes.Status201Created)]
+        //[ProducesResponseType(typeof(ApiReturn<string>), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Login(TokenRequestDto tokenRequestDto)
         {
             ApiReturn<LoginResponseDto> model = new ApiReturn<LoginResponseDto> { Status = true };

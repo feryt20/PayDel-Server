@@ -41,6 +41,7 @@ E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\bin\Debug\netco
 E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\bin\Debug\netcoreapp3.1\IdentityModel.dll
 E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\bin\Debug\netcoreapp3.1\RestSharp.dll
+E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.csprojAssemblyReference.cache
 E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.AssemblyInfoInputs.cache
 E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.AssemblyInfo.cs
 E:\Projects\visual studio 2019\PayDel-Server\IdentityTestConsole\obj\Debug\netcoreapp3.1\IdentityTestConsole.csproj.CoreCompileInputs.cache
