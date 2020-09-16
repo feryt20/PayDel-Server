@@ -64,6 +64,7 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
 
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         [ServiceFilter(typeof(UserCheckIdFilter))]
         public async Task<IActionResult> GetUsers(string id)

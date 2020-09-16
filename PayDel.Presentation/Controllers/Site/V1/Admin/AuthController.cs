@@ -143,6 +143,7 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
         /// </summary>
         /// <param name="getVerificationCodeDto"></param>
         /// <returns></returns>
+        [AllowAnonymous]
         [HttpPost("code")]
         [ProducesResponseType(typeof(ApiReturn<int>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiReturn<int>), StatusCodes.Status400BadRequest)]
@@ -193,7 +194,7 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
             if (user == null)
             {
                 var randomOTP = new Random().Next(10000, 99999);
-                if (_smsService.SendVerificationCode(getVerificationCodeDto.Mobile, randomOTP.ToString()))
+                if (!_smsService.SendVerificationCode(getVerificationCodeDto.Mobile, randomOTP.ToString()))
                 {
                     var vc = new VerificationCode
                     {
@@ -226,6 +227,7 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
             }
         }
 
+        [AllowAnonymous]
         [HttpPost("register2")]
         [ProducesResponseType(typeof(ApiReturn<UserForDetailedDto>), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ApiReturn<string>), StatusCodes.Status400BadRequest)]
@@ -271,19 +273,7 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
                     IsActive = true,
                     PhoneNumberConfirmed = true
                 };
-                var photoToCreate = new Photo
-                {
-                    UserId = userToCreate.Id,
-                    Url = string.Format("{0}://{1}{2}/{3}",
-                        Request.Scheme,
-                        Request.Host.Value ?? "",
-                        Request.PathBase.Value ?? "",
-                        "wwwroot/Files/Pic/profilepic.png"), //"https://res.cloudinary.com/keyone2693/image/upload/v1561717720/768px-Circle-icons-profile.svg.png",
-                    Description = "Profile Pic",
-                    Alt = "Profile Pic",
-                    IsMain = true
-                };
-               
+             
 
                 var result = await _userManager.CreateAsync(userToCreate, userForRegisterDto.Password);
 
@@ -298,7 +288,7 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
                     //
                     model.Message = "ثبت نام شما با موفقیت انجام شد";
                     model.Result = userForReturn;
-                    return CreatedAtRoute("GetUser", new
+                    return CreatedAtRoute("GetUsers", new
                     {
                         controller = "Users",
                         v = HttpContext.GetRequestedApiVersion().ToString(),
@@ -324,6 +314,8 @@ namespace PayDel.Presentation.Controllers.Site.V1.Admin
                 return BadRequest(errorModel);
             }
         }
+
+        [AllowAnonymous]
         [HttpPost("RegisterWithSocial")]
         [ProducesResponseType(typeof(ApiReturn<UserForDetailedDto>), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ApiReturn<string>), StatusCodes.Status400BadRequest)]

@@ -8,7 +8,7 @@ namespace PayDel.Data.Dtos.Site.Admin
     public class UserForRegisterDto
     {
         [Required]
-        [EmailAddress(ErrorMessage ="ایمیل وارد شده صحیح نیست")]
+        //[EmailAddress(ErrorMessage ="ایمیل وارد شده صحیح نیست")]
         public string UserName { get; set; }
 
         [Required]
