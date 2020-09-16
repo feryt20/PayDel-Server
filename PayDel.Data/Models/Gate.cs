@@ -43,6 +43,6 @@ namespace PayDel.Data.Models
         [Required]
         public string WalletId { get; set; }
         [ForeignKey("WalletId")]
-        public Wallet Wallet { get; set; }
+        public virtual Wallet Wallet { get; set; }
     }
 }

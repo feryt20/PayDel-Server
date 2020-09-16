@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using PayDel.Repo.Repositories.Repo;
 using PayDel.Repo.Repositories.Interface;
+using System.Linq;
+using System.Reflection;
+using PayDel.Common.Helpers;
 
 namespace PayDel.Repo.Infrastructures
 {
@@ -89,6 +92,7 @@ namespace PayDel.Repo.Infrastructures
         #region methods
         public void Save()
         {
+            _cleanStrings();
             _db.SaveChanges();
         }
 
@@ -96,6 +100,7 @@ namespace PayDel.Repo.Infrastructures
         {
             try
             {
+                _cleanStrings();
                 return await _db.SaveChangesAsync();
             }
             catch (Exception)
@@ -104,6 +109,37 @@ namespace PayDel.Repo.Infrastructures
                 return 0;
             }
             
+        }
+
+        private void _cleanStrings()
+        {
+            var changedEntities = _db.ChangeTracker.Entries()
+                .Where(p => p.State == EntityState.Added || p.State == EntityState.Modified);
+            foreach (var item in changedEntities)
+            {
+                if (item.Entity == null)
+                    continue;
+
+                var properties = item.Entity.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                    .Where(p => p.CanRead && p.CanWrite && p.PropertyType == typeof(string));
+
+                foreach (var property in properties)
+                {
+                    var propName = property.Name;
+                    var val = (string)property.GetValue(item.Entity, null);
+
+                    if (val.HasValue())
+                    {
+                        var newVal = val.CleanString();
+                        if (newVal == val)
+                            continue;
+                        property.SetValue(item.Entity, newVal, null);
+                    }
+                }
+            }
+            {
+
+            }
         }
         #endregion
 

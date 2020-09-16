@@ -38,12 +38,10 @@ namespace PayDel.Data.Models
         [StringLength(150, MinimumLength = 0)]
         public string ImageUrl { get; set; }
 
-        public ICollection<Photo> Photos { get; set; }
-        public ICollection<BankCard> BankCards { get; set; }
-        //public string Created { get; set; }
-        //public string Created { get; set; }
-        public ICollection<MyToken> MyTokens { get; set; }
-        public ICollection<Wallet> Wallets { get; set; }
-        public ICollection<EasyPay> EasyPays { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
+        public virtual ICollection<BankCard> BankCards { get; set; }
+        public virtual ICollection<MyToken> MyTokens { get; set; }
+        public virtual ICollection<Wallet> Wallets { get; set; }
+        public virtual ICollection<EasyPay> EasyPays { get; set; }
     }
 }
