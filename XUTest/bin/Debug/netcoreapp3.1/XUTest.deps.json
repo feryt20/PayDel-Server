@@ -1615,6 +1615,14 @@
           }
         }
       },
+      "SmsIrRestfulNetCore/1.1.4": {
+        "runtime": {
+          "lib/netcoreapp2.0/SmsIrRestfulNetCore.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/5.6.0": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
@@ -2746,7 +2754,8 @@
       "PayDel.Services/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
-          "PayDel.Repo": "1.0.0"
+          "PayDel.Repo": "1.0.0",
+          "SmsIrRestfulNetCore": "1.1.4"
         },
         "runtime": {
           "PayDel.Services.dll": {}
@@ -3690,6 +3699,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SmsIrRestfulNetCore/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yZVm87oKasXdVl1BYucfj66ZPtFDcMR7Wc7Kf9Zgbw7ylMR2bCBuKD1dEawYBVQLwTZmFjjnTZQCSEw+nZ5CNw==",
+      "path": "smsirrestfulnetcore/1.1.4",
+      "hashPath": "smsirrestfulnetcore.1.1.4.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/5.6.0": {
       "type": "package",

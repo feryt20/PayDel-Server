@@ -206,7 +206,7 @@ namespace PayDel.Repo.Infrastructures
 
         public async Task<PagedList<TEntity>> GetAllPagedListAsync(PaginationDto paginationDto)
         {
-            IQueryable<TEntity> query = _dbSet.AsNoTracking();
+            IQueryable<TEntity> query = _dbSet;
             //filter
 
             //include
@@ -222,7 +222,7 @@ namespace PayDel.Repo.Infrastructures
             IOrderedQueryable<TEntity>> orderBy,
             string includeEntity, int count, int firstCount, int page)
         {
-            IQueryable<TEntity> query = _dbSet.AsNoTracking();
+            IQueryable<TEntity> query = _dbSet;
 
             if (filter != null)
             {

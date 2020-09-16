@@ -23,8 +23,8 @@ namespace PayDel.Data.DatabaseContext
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=PayDelDb;Integrated Security=true;MultipleActiveResultSets=True;");
-            optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Data Source=(local);Initial Catalog=PayDelDb;Integrated Security=true;MultipleActiveResultSets=True;");
+            optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=PayDelDb;Integrated Security=true;MultipleActiveResultSets=True;");
+            //optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Data Source=(local);Initial Catalog=PayDelDb;Integrated Security=true;MultipleActiveResultSets=True;");
 
         }
 
@@ -35,7 +35,7 @@ namespace PayDel.Data.DatabaseContext
         public DbSet<Wallet> Wallets { get; set; }
         public DbSet<Gate> Gates { get; set; }
         public DbSet<EasyPay> EasyPays { get; set; }
-        //public DbSet<VerificationCode> VerificationCodes { get; set; }
+        public DbSet<VerificationCode> VerificationCodes { get; set; }
 
 
 

@@ -89,6 +89,19 @@ namespace PayDel.Repo.Infrastructures
                 return photoRepository;
             }
         }
+
+        private IVerificationCodeRepository verificationCodeRepository;
+        public IVerificationCodeRepository _VerificationCodeRepository
+        {
+            get
+            {
+                if (verificationCodeRepository == null)
+                {
+                    verificationCodeRepository = new VerificationCodeRepository(_db);
+                }
+                return verificationCodeRepository;
+            }
+        }
         #region methods
         public void Save()
         {

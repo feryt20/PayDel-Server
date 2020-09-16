@@ -36,6 +36,7 @@ namespace PayDel.Presentation.Helpers.Configuration
 
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IUtilitiess, Utilitiess>();
+            services.AddScoped<ISmsService, SmsService>();
             services.AddScoped<IUploadService, UploadService>();
             services.AddSingleton<ILookupClient, LookupClient>();
             services.AddScoped<IWalletService, WalletService>();

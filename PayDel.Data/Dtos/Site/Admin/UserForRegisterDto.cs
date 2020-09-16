@@ -21,5 +21,9 @@ namespace PayDel.Data.Dtos.Site.Admin
 
         [Required]
         public string PhoneNumber { get; set; }
+
+        [Required]
+        [StringLength(5, MinimumLength = 5, ErrorMessage = "کد فعالسازی باید 5 رقمی باشد")]
+        public string Code { get; set; }
     }
 }

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
+using System.Text;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -46,7 +49,79 @@ namespace PayDel.Common.Helpers
             }
             return age;
         }
+        #region encrypt_decrypt
 
+        public static string Encrypt(this string clearText)
+        {
+            const string encryptionKey = "639512!c5-59eb-4c62-93f3-4825@4-d7757b0-ac5bb";
+            var clearBytes = Encoding.Unicode.GetBytes(clearText);
+            using (var encryptor = Aes.Create())
+            {
+                var pdb = new Rfc2898DeriveBytes(encryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
+                encryptor.Key = pdb.GetBytes(32);
+                encryptor.IV = pdb.GetBytes(16);
+                using (var ms = new MemoryStream())
+                {
+                    using (var cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(clearBytes, 0, clearBytes.Length);
+                        cs.Close();
+                    }
+                    clearText = Convert.ToBase64String(ms.ToArray());
+                }
+            }
+            return clearText;
+        }
+        public static string Decrypt(this string cipherText)
+        {
+            const string encryptionKey = "639512!c5-59eb-4c62-93f3-4825@4-d7757b0-ac5bb";
+            cipherText = cipherText.Replace(" ", "+");
+            var cipherBytes = Convert.FromBase64String(cipherText);
+            using (var encryptor = Aes.Create())
+            {
+                var pdb = new Rfc2898DeriveBytes(encryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
+                encryptor.Key = pdb.GetBytes(32);
+                encryptor.IV = pdb.GetBytes(16);
+                using (var ms = new MemoryStream())
+                {
+                    using (var cs = new CryptoStream(ms, encryptor.CreateDecryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(cipherBytes, 0, cipherBytes.Length);
+                        cs.Close();
+                    }
+                    cipherText = Encoding.Unicode.GetString(ms.ToArray());
+                }
+            }
+            return cipherText;
+        }
+
+
+        #endregion
+        public static string ToMobile(this string number)
+        {
+            if (string.IsNullOrEmpty(number))
+            {
+                return null;
+            }
+            var str = number.Trim();
+            if (str.StartsWith("+98"))
+            {
+                str = str.Replace("+98", "0");
+            }
+            else if (str.StartsWith("98"))
+            {
+                str = str.Replace("98", "0");
+            }
+            if (!str.StartsWith("0"))
+            {
+                str = "0" + str;
+            }
+            if (str.Length == 11)
+            {
+                return str;
+            }
+            return null;
+        }
         public static string En2Fa(this string str)
         {
             return str.Replace("0", "۰")
