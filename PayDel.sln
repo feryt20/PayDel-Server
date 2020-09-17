@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayDel.IdServer", "PayDel.I
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{B4D1196C-5947-4C36-B593-781BC45BE401}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityTestConsole", "IdentityTestConsole\IdentityTestConsole.csproj", "{9DA8E1F9-E0E2-4BD9-AFDA-EFDCFF887071}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityTestConsole", "IdentityTestConsole\IdentityTestConsole.csproj", "{9DA8E1F9-E0E2-4BD9-AFDA-EFDCFF887071}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
