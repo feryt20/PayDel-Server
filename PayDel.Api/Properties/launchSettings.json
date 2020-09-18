@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Production"
       }
     },
-    "PayDel.Presentation": {
+    "PayDel.Api": {
       "commandName": "Project",
       "launchUrl": "weatherforecast",
       "environmentVariables": {

@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Dtos\Api\**" />
     <Compile Remove="Dtos\Site\App\**" />
-    <EmbeddedResource Remove="Dtos\Api\**" />
     <EmbeddedResource Remove="Dtos\Site\App\**" />
-    <None Remove="Dtos\Api\**" />
     <None Remove="Dtos\Site\App\**" />
   </ItemGroup>
 

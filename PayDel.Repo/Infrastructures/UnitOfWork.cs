@@ -8,6 +8,8 @@ using PayDel.Repo.Repositories.Interface;
 using System.Linq;
 using System.Reflection;
 using PayDel.Common.Helpers;
+using PayDel.Repo.Repositories.FinancialDB.Interface;
+using PayDel.Repo.Repositories.FinancialDB.Repo;
 
 namespace PayDel.Repo.Infrastructures
 {
@@ -103,6 +105,35 @@ namespace PayDel.Repo.Infrastructures
             }
         }
         #region methods
+
+
+        #region privateFinancialrepository
+        private IEntryRepository entryRepository;
+        public IEntryRepository EntryRepository
+        {
+            get
+            {
+                if (entryRepository == null)
+                {
+                    entryRepository = new EntryRepository(_db);
+                }
+                return entryRepository;
+            }
+        }
+        private IFactorRepository factorRepository;
+        public IFactorRepository FactorRepository
+        {
+            get
+            {
+                if (factorRepository == null)
+                {
+                    factorRepository = new FactorRepository(_db);
+                }
+                return factorRepository;
+            }
+        }
+        #endregion
+
         public void Save()
         {
             _cleanStrings();

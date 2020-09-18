@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PayDel.Repo.Repositories.FinancialDB.Interface;
 using PayDel.Repo.Repositories.Interface;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,10 @@ namespace PayDel.Repo.Infrastructures
         IPhotoRepository _PhotoRepository { get; }
 
         IVerificationCodeRepository _VerificationCodeRepository { get; }
+
+        IEntryRepository EntryRepository { get; }
+        IFactorRepository FactorRepository { get; }
+
         void Save();
         Task<int> SaveAcync();
     }

@@ -40,7 +40,7 @@ namespace PayDel.Api.Helpers.Configuration
             services.AddScoped<IUploadService, UploadService>();
             services.AddSingleton<ILookupClient, LookupClient>();
             services.AddScoped<IWalletService, WalletService>();
-            services.AddScoped<UserCheckIdFilter>();
+            //services.AddScoped<UserCheckIdFilter>();
             //services.AddScoped<TokenSetting>();
         }
     }

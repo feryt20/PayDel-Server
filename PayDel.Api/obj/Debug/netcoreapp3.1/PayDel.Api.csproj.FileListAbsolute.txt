@@ -94,6 +94,10 @@ E:\Projects\visual studio 2019\PayDel-Server\PayDel.Api\bin\Debug\netcoreapp3.1\
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.dll
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.Api\bin\Debug\netcoreapp3.1\Parbad.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.Api\bin\Debug\netcoreapp3.1\Parbad.AspNetCore.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.Api\bin\Debug\netcoreapp3.1\Parbad.Gateway.ZarinPal.dll
+E:\Projects\visual studio 2019\PayDel-Server\PayDel.Api\bin\Debug\netcoreapp3.1\Parbad.Storage.Cache.dll
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.Api\obj\Debug\netcoreapp3.1\PayDel.Api.csproj.CoreCompileInputs.cache
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.Api\obj\Debug\netcoreapp3.1\PayDel.Api.MvcApplicationPartsAssemblyInfo.cs
 E:\Projects\visual studio 2019\PayDel-Server\PayDel.Api\obj\Debug\netcoreapp3.1\PayDel.Api.MvcApplicationPartsAssemblyInfo.cache

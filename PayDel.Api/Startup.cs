@@ -39,6 +39,8 @@ namespace PayDel.Api
 
             services.AddPayApiVersioning();
             services.AddPaySwagger();
+
+            services.AddMadParbad(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,7 +67,7 @@ namespace PayDel.Api
             //         name: "default",
             //       pattern: "{controller=home}/{action=index}/{id}");
             //});
-
+            app.UseMadParbad();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

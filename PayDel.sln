@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityTestConsole", "Iden
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayDel.Api", "PayDel.Api\PayDel.Api.csproj", "{0BB5037A-D92C-46D7-BFCD-E741C54BC0AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayDel.Payment", "PayDel.Payment\PayDel.Payment.csproj", "{632141E2-922D-453F-AF0D-566FAE6EF2CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{0BB5037A-D92C-46D7-BFCD-E741C54BC0AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BB5037A-D92C-46D7-BFCD-E741C54BC0AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BB5037A-D92C-46D7-BFCD-E741C54BC0AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{632141E2-922D-453F-AF0D-566FAE6EF2CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{632141E2-922D-453F-AF0D-566FAE6EF2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{632141E2-922D-453F-AF0D-566FAE6EF2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{632141E2-922D-453F-AF0D-566FAE6EF2CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

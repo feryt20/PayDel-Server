@@ -97,6 +97,82 @@ namespace PayDel.Common.Helpers
 
 
         #endregion
+
+        public static short ToBank(this string BankName)
+        {
+            switch (BankName)
+            {
+                case "Saman":
+                    return 1;
+                case "Mellat":
+                    return 2;
+                case "Parsian":
+                    return 3;
+                case "Pasargad":
+                    return 4;
+                case "Iran Kish":
+                    return 5;
+                case "Melli":
+                    return 6;
+                case "Asan Pardakht":
+                    return 7;
+                case "ZarinPal":
+                    return 8;
+                case "Virtual":
+                    return 9;
+                default:
+                    return 9;
+            }
+        }
+        public static string ToPrice(this object dec)
+        {
+            if (dec == null)
+                dec = 0;
+            string Src = dec.ToString();
+            Src = Src.Replace(".0000", "");
+            if (!Src.Contains("."))
+            {
+                Src = Src + ".00";
+            }
+            string[] price = Src.Split('.');
+            if (price[1].Length >= 2)
+            {
+                price[1] = price[1].Substring(0, 2);
+                price[1] = price[1].Replace("00", "");
+            }
+
+            string Temp = null;
+            int i = 0;
+            if ((price[0].Length % 3) >= 1)
+            {
+                Temp = price[0].Substring(0, (price[0].Length % 3));
+                for (i = 0; i <= (price[0].Length / 3) - 1; i++)
+                {
+                    Temp += "," + price[0].Substring((price[0].Length % 3) + (i * 3), 3);
+                }
+            }
+            else
+            {
+                for (i = 0; i <= (price[0].Length / 3) - 1; i++)
+                {
+                    Temp += price[0].Substring((price[0].Length % 3) + (i * 3), 3) + ",";
+                }
+                Temp = Temp.Substring(0, Temp.Length - 1);
+                // Temp = price(0)
+                //If price(1).Length > 0 Then
+                //    Return price(0) + "." + price(1)
+                //End If
+            }
+            if (price[1].Length > 0)
+            {
+                return Temp + "." + price[1];
+            }
+            else
+            {
+                return Temp;
+            }
+        }
+
         public static string ToMobile(this string number)
         {
             if (string.IsNullOrEmpty(number))

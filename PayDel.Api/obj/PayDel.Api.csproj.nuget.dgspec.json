@@ -54,6 +54,22 @@
               "target": "Package",
               "version": "[4.1.1, )"
             },
+            "Parbad": {
+              "target": "Package",
+              "version": "[3.5.1, )"
+            },
+            "Parbad.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
+            "Parbad.Gateway.ZarinPal": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            },
+            "Parbad.Storage.Cache": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.1, )"

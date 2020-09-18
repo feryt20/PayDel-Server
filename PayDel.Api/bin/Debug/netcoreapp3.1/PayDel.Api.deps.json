@@ -27,6 +27,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.8",
           "Microsoft.AspNetCore.Mvc.Versioning": "4.1.1",
+          "Parbad": "3.5.1",
+          "Parbad.AspNetCore": "1.0.6",
+          "Parbad.Gateway.ZarinPal": "1.0.5",
+          "Parbad.Storage.Cache": "1.0.3",
           "PayDel.Services": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -1253,6 +1257,62 @@
         },
         "compile": {
           "lib/netcoreapp3.0/NLog.Web.AspNetCore.dll": {}
+        }
+      },
+      "Parbad/3.5.1": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Parbad.dll": {
+            "assemblyVersion": "3.5.1.0",
+            "fileVersion": "3.5.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Parbad.dll": {}
+        }
+      },
+      "Parbad.AspNetCore/1.0.6": {
+        "dependencies": {
+          "Parbad": "3.5.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Parbad.AspNetCore.dll": {
+            "assemblyVersion": "1.0.6.0",
+            "fileVersion": "1.0.6.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Parbad.AspNetCore.dll": {}
+        }
+      },
+      "Parbad.Gateway.ZarinPal/1.0.5": {
+        "dependencies": {
+          "Parbad": "3.5.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Parbad.Gateway.ZarinPal.dll": {
+            "assemblyVersion": "1.0.5.0",
+            "fileVersion": "1.0.5.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Parbad.Gateway.ZarinPal.dll": {}
+        }
+      },
+      "Parbad.Storage.Cache/1.0.3": {
+        "dependencies": {
+          "Parbad": "3.5.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Parbad.Storage.Cache.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Parbad.Storage.Cache.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -4497,6 +4557,34 @@
       "sha512": "sha512-C12FzK0z67Y6FC+NDckeZzJmJZmnM+fKCmKbe7at2XBj1O58PPhOZYnKC8Ryw4u+3cyHiMBVlZYwRhWJXs6RFg==",
       "path": "nlog.web.aspnetcore/4.9.2",
       "hashPath": "nlog.web.aspnetcore.4.9.2.nupkg.sha512"
+    },
+    "Parbad/3.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q5noYQ+HiYcXE7UvsG2mcMzMCvPb0FsSV4iMeItdNsxIMyRCVUFUC0ltlUGWZyfHqIkM28khn5CnL1qvA/KfbQ==",
+      "path": "parbad/3.5.1",
+      "hashPath": "parbad.3.5.1.nupkg.sha512"
+    },
+    "Parbad.AspNetCore/1.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LzBLHQxJtbjp8/zO20bqsP9HOgAl6F7qyPdozJXAOCIkPF7TpAtKUA36f5wImnSgNS4hAhar+leXDnaWxp9u+g==",
+      "path": "parbad.aspnetcore/1.0.6",
+      "hashPath": "parbad.aspnetcore.1.0.6.nupkg.sha512"
+    },
+    "Parbad.Gateway.ZarinPal/1.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UeSsL0zmB/P56Grlc3BZDdyMEcXB2YdXgVyiGNHjEyPK/74VBZ918YaMUzAhFNW0nxXvlZUvv4VXMLK+7lPc5w==",
+      "path": "parbad.gateway.zarinpal/1.0.5",
+      "hashPath": "parbad.gateway.zarinpal.1.0.5.nupkg.sha512"
+    },
+    "Parbad.Storage.Cache/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wmFP9An7R1tJdNU1YKt8I2qEbKYzYdhUbHdmojh8N26Tz31jm/JdPmJ0fPN/8/5qVifuKQqu0YFQSzUFn+HsIg==",
+      "path": "parbad.storage.cache/1.0.3",
+      "hashPath": "parbad.storage.cache.1.0.3.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
