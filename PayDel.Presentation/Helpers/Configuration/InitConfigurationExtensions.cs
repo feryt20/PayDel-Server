@@ -26,7 +26,7 @@ namespace PayDel.Presentation.Helpers.Configuration
             services.AddMvc(opt =>
             {
                 //opt.EnableEndpointRouting = false;
-                opt.ReturnHttpNotAcceptable = true;
+                //opt.ReturnHttpNotAcceptable = true;
                 //opt.SuppressAsyncSuffixInActionNames = false;
                 //opt.SslPort = 4052;
 
