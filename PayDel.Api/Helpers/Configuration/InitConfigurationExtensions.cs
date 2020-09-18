@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.DependencyInjection;
 using PayDel.Data.DatabaseContext;
+using PayDel.Data.Dtos;
 using PayDel.Services.Seed.Service;
 using System;
 using System.Collections.Generic;
@@ -74,9 +75,33 @@ namespace PayDel.Api.Helpers.Configuration
 
 
 
-            //services.AddCors(opt => opt.AddPolicy("CorsPolicy", builder =>
-            //builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader().AllowCredentials()));
+            services.AddCors(opt => opt.AddPolicy("CorsPolicy", builder =>
+                builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader().AllowCredentials()));
 
+            //Custom ModelState Error
+            services.Configure<ApiBehaviorOptions>(opt =>
+            {
+                opt.InvalidModelStateResponseFactory = context =>
+                {
+                    var strErrorList = new List<string>();
+                    var msErrors = context.ModelState.Where(p => p.Value.Errors.Count > 0);
+                    foreach (var msError in msErrors)
+                    {
+                        foreach (var error in msError.Value.Errors)
+                        {
+                            strErrorList.Add(error.ErrorMessage);
+                        }
+                    }
+                    var errorModel = new GateApiReturn<string>
+                    {
+                        Status = false,
+                        Messages = strErrorList.ToArray(),
+                        Result = null
+                    };
+                    return new BadRequestObjectResult(errorModel);
+                };
+            });
+            //
 
             services.AddResponseCaching();
             services.AddResponseCompression(opt => opt.Providers.Add<GzipCompressionProvider>());

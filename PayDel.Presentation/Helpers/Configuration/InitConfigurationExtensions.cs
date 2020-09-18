@@ -74,8 +74,8 @@ namespace PayDel.Presentation.Helpers.Configuration
 
 
 
-            //services.AddCors(opt => opt.AddPolicy("CorsPolicy", builder =>
-            //builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader().AllowCredentials()));
+            services.AddCors(opt => opt.AddPolicy("CorsPolicy", builder =>
+                builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader().AllowCredentials()));
 
 
             services.AddResponseCaching();
