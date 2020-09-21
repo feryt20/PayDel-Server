@@ -23,8 +23,8 @@ namespace PayDel.Data.DatabaseContext
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=PayDelDb;Integrated Security=true;MultipleActiveResultSets=True;");
-            //optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Data Source=(local);Initial Catalog=PayDelDb;Integrated Security=true;MultipleActiveResultSets=True;");
+            optionsBuilder.UseSqlServer("Server=localhost , 1400;Initial Catalog=PayDelDb;User Id=SA;Password=My!123456;");
+            //optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Server=(local);Initial Catalog=PayDelDb;User Id=sa;Password=fery;;Integrated Security=True;MultipleActiveResultSets=True;");
 
         }
 

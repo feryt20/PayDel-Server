@@ -7,17 +7,17 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PayDel.Data.DatabaseContext;
 
-namespace PayDel.Data.Migrations.logMigration
+namespace PayDel.Data.Migrations.LogDb
 {
     [DbContext(typeof(LogDbContext))]
-    [Migration("20200730100838_initdb2")]
-    partial class initdb2
+    [Migration("20200921075526_updatedb")]
+    partial class updatedb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.5")
+                .HasAnnotation("ProductVersion", "3.1.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 

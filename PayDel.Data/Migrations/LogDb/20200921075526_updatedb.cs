@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace PayDel.Data.Migrations.logMigration
+namespace PayDel.Data.Migrations.LogDb
 {
-    public partial class initdb2 : Migration
+    public partial class updatedb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -11,9 +11,13 @@ namespace PayDel.Data.DatabaseContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
-            optionBuilder.UseSqlServer(@"Data Source=(local);Initial Catalog=PayDel_Logdb;Integrated Security=True;MultipleActiveResultSets=True;");
+            optionBuilder.UseSqlServer(@"Server=localhost , 1400;Initial Catalog=PayDel_Logdb;User Id=SA;Password=My!123456;");
+            //.UseSqlServer(@"Server=(local);Initial Catalog=PayDel_Logdb;User Id=sa;Password=fery;");
         }
 
+        public LogDbContext(DbContextOptions<LogDbContext> options)
+    : base(options)
+        { }
 
         public DbSet<ExtendedLog> Logs { get; set; }
 

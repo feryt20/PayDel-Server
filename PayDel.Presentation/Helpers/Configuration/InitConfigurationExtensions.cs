@@ -6,20 +6,30 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.DependencyInjection;
 using PayDel.Data.DatabaseContext;
 using PayDel.Services.Seed.Service;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace PayDel.Presentation.Helpers.Configuration
 {
     public static class InitConfigurationExtensions
     {
-        public static void AddPayDbContext(this IServiceCollection services)
+        public static void AddPayDbContext(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<PayDelDbContext>();
-            services.AddDbContext<FinDbContext>();
-            services.AddDbContext<LogDbContext>();
+            var con = configuration.GetSection("ConnectionStrings");
+
+            services.AddDbContext<PayDelDbContext>(opt => {
+                opt.UseSqlServer(con.GetSection("Main").Value);
+            });
+            services.AddDbContext<FinDbContext>(opt => {
+                opt.UseSqlServer(con.GetSection("Financial").Value);
+            });
+            services.AddDbContext<LogDbContext>(opt => {
+                opt.UseSqlServer(con.GetSection("Log").Value);
+            });
         }
         public static void AddPayInitialize(this IServiceCollection services)
         {
@@ -91,6 +101,24 @@ namespace PayDel.Presentation.Helpers.Configuration
             app.UseResponseCompression();
             seeder.SeedUsers();
             app.UseRouting();
+
+           // app.UseCsp(opt => opt
+           //.StyleSources(s => s.Self()
+           //.UnsafeInline().CustomSources("pay.madpay724.ir", "api.madpay724.ir", "fonts.googleapis.com"))
+           //.ScriptSources(s => s.Self()
+           //.UnsafeInline().UnsafeEval().CustomSources("pay.madpay724.ir", "api.madpay724.ir", "apis.google.com", "connect.facebook.net"))
+           //.ImageSources(s => s.Self()
+           //.CustomSources("pay.madpay724.ir", "api.madpay724.ir", "res.cloudinary.com", "cloudinary.com", "data:"))
+           //.MediaSources(s => s.Self()
+           //.CustomSources("pay.madpay724.ir", "api.madpay724.ir", "res.cloudinary.com", "cloudinary.com", "data:"))
+           //.FontSources(s => s.Self()
+           //.CustomSources("fonts.gstatic.com", "data:"))
+           //.FrameSources(s => s.Self()
+           //.CustomSources("accounts.google.com"))
+           //);
+
+
+           // app.UseXfo(o => o.Deny());
         }
 
         public static void UsePayInitializeInProduction(this IApplicationBuilder app)

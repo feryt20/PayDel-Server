@@ -18,8 +18,8 @@ namespace PayDel.Data.DatabaseContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
-            optionBuilder
-                .UseSqlServer(@"Server=(local);Database=PayDel_FinDb;User Id=sa;Password=fery;Trusted_Connection=True;MultipleActiveResultSets=True;");
+            optionBuilder.UseSqlServer(@"Server=localhost , 1400;Initial Catalog=PayDel_FinDb;User Id=SA;Password=My!123456;");
+            //.UseSqlServer(@"Server=(local);Initial Catalog=PayDel_FinDb;User Id=sa;Password=fery;");
         }
 
         public DbSet<Factor> Factors { get; set; }
