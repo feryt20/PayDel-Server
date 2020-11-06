@@ -9,3 +9,13 @@ PayDel.Repo/bin
 PayDel.Repo/obj
 PayDel.Services/bin
 PayDel.Services/obj
+XUTest/bin
+XUTest/obj
+PayDel.Payment/bin
+PayDel.Payment/obj
+PayDel.IdServer/bin
+PayDel.IdServer/obj
+PayDel.Api/bin
+PayDel.Api/obj
+IdentityTestConsole/bin
+IdentityTestConsole/obj
